@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gAy-9M-fTw">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Base Container View Controller-->
+        <scene sceneID="xPT-hy-nLL">
+            <objects>
+                <viewController id="gAy-9M-fTw" customClass="BaseContainerViewController" customModule="music_player" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zLH-yv-W7Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="ack-wb-1b5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="79p-TT-pcd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I51-Cq-1Hl">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="I51-Cq-1Hl" firstAttribute="leading" secondItem="79p-TT-pcd" secondAttribute="leading" id="6D5-0Z-c8q"/>
+                            <constraint firstItem="I51-Cq-1Hl" firstAttribute="top" secondItem="zLH-yv-W7Z" secondAttribute="bottom" id="Mao-aF-Nqw"/>
+                            <constraint firstItem="ack-wb-1b5" firstAttribute="top" secondItem="I51-Cq-1Hl" secondAttribute="bottom" id="agd-P0-Vrp"/>
+                            <constraint firstAttribute="trailing" secondItem="I51-Cq-1Hl" secondAttribute="trailing" id="b3z-xx-jBa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="I51-Cq-1Hl" id="CFH-Kc-S0B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q0p-Jf-ll2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="262" y="366"/>
+        </scene>
+    </scenes>
+</document>

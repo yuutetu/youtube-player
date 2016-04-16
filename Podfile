@@ -6,4 +6,5 @@ xcodeproj 'music-player', 'Test' => :debug
 target 'music-player' do
   pod 'RxCocoa'
   pod 'RxSwift'
+  pod 'SnapKit'
 end
