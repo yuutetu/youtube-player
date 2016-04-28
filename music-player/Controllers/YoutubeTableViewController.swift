@@ -25,7 +25,7 @@ class YoutubeTableViewController: UITableViewController {
     func setupContents() {
         // TODO: DataSourceとViewModelの構成にしたい
         let mainScheduler: SerialDispatchQueueScheduler = MainScheduler.instance
-        YoutubeApiClient.defaultClient.request().observeOn(mainScheduler).subscribe({ event in
+        YoutubeApiClient.defaultClient.request(YoutubeAPI.Movies.Popular).observeOn(mainScheduler).subscribe({ event in
             switch event {
             case .Next(let element):
                 do {
@@ -36,7 +36,7 @@ class YoutubeTableViewController: UITableViewController {
                     print(json)
                     // TODO: パースしてセルを生成
                     // TODO: セルの追加とセル数計算の更新
-                } catch let _ {
+                } catch _ {
                     print("error: 2")
                 }
             case .Completed:

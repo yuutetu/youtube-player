@@ -13,9 +13,9 @@ class YoutubeApiClient: NSObject {
     static let defaultClient = YoutubeApiClient()
     let apiKey = "AIzaSyDLRGv2WnJZNzg1LvE4tbASEox3kbDsQVU"
     
-    func request() -> Observable<(NSData, NSHTTPURLResponse)> {
+    func request(request: YoutubeAPIRequest) -> Observable<(NSData, NSHTTPURLResponse)> {
         // TODO: エンドポイントの切り替え, パース処理, ログイン認証
-        let request = NSURLRequest(URL: NSURL(string: "https://www.googleapis.com/youtube/v3/videos?part=id,snippet&chart=mostpopular&key=\(apiKey)")!)
+        let request = NSURLRequest(URL: NSURL(string: "\(request.requestURL)&key=\(apiKey)")!)
         let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
         let session = NSURLSession(configuration: configuration)
         return session.rx_response(request)
