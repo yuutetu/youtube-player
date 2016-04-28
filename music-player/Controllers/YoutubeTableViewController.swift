@@ -24,12 +24,21 @@ class YoutubeTableViewController: UITableViewController {
     
     func setupContents() {
         // TODO: DataSourceとViewModelの構成にしたい
-        YoutubeApiClient.defaultClient.request().subscribe({ event in
+        let mainScheduler: SerialDispatchQueueScheduler = MainScheduler.instance
+        YoutubeApiClient.defaultClient.request().observeOn(mainScheduler).subscribe({ event in
             switch event {
             case .Next(let element):
-                print(element.0.description)
-                // TODO: パースしてセルを生成
-                // TODO: セルの追加とセル数計算の更新
+                do {
+                    guard let json = try NSJSONSerialization.JSONObjectWithData(element.0, options: NSJSONReadingOptions()) as? [String: AnyObject] else {
+                        print("error: 1")
+                        return
+                    }
+                    print(json)
+                    // TODO: パースしてセルを生成
+                    // TODO: セルの追加とセル数計算の更新
+                } catch let _ {
+                    print("error: 2")
+                }
             case .Completed:
                 break
             case .Error(let error):
