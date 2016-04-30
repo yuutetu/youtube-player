@@ -10,4 +10,5 @@ target 'music-player' do
   pod 'SnapKit'
   pod 'Argo'
   pod 'Curry'
+  pod 'Haneke'
 end

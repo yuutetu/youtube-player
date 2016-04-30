@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Youtube Collection View Controller-->
@@ -19,36 +20,70 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nNb-7n-tXs">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ipM-e2-fM1">
-                                    <size key="itemSize" width="547" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="10" id="ipM-e2-fM1">
+                                    <size key="itemSize" width="547" height="200"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BasicCell" id="fpe-mx-5mD" customClass="YoutubeCollectionViewCell" customModule="music_player" customModuleProvider="target">
-                                        <rect key="frame" x="27" y="0.0" width="547" height="50"/>
+                                        <rect key="frame" x="27" y="0.0" width="547" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="547" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="547" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wf-Hh-y4f">
-                                                    <rect key="frame" x="253" y="15" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PfT-ij-ZwX">
+                                                    <rect key="frame" x="267" y="0.0" width="280" height="200"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQF-FN-lFh">
+                                                            <rect key="frame" x="10" y="10" width="260" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="VQF-FN-lFh" firstAttribute="leading" secondItem="PfT-ij-ZwX" secondAttribute="leading" constant="10" id="M2z-UU-rgJ"/>
+                                                        <constraint firstItem="VQF-FN-lFh" firstAttribute="top" secondItem="PfT-ij-ZwX" secondAttribute="top" constant="10" id="XLE-NN-EMr"/>
+                                                        <constraint firstAttribute="trailing" secondItem="VQF-FN-lFh" secondAttribute="trailing" constant="10" id="zLI-Sg-gIx"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Dz-Wn-1Qr">
+                                                    <rect key="frame" x="0.0" y="0.0" width="267" height="200"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CAO-Cn-tZt">
+                                                            <rect key="frame" x="0.0" y="0.0" width="267" height="200"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="CAO-Cn-tZt" secondAttribute="trailing" id="8WU-SZ-uql"/>
+                                                        <constraint firstItem="CAO-Cn-tZt" firstAttribute="leading" secondItem="2Dz-Wn-1Qr" secondAttribute="leading" id="AU6-3H-Xor"/>
+                                                        <constraint firstItem="CAO-Cn-tZt" firstAttribute="top" secondItem="2Dz-Wn-1Qr" secondAttribute="top" id="fIp-Zk-Axf"/>
+                                                        <constraint firstAttribute="width" secondItem="2Dz-Wn-1Qr" secondAttribute="height" multiplier="4:3" id="hHY-so-RlV"/>
+                                                        <constraint firstAttribute="bottom" secondItem="CAO-Cn-tZt" secondAttribute="bottom" id="hYi-ux-l3m"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="7wf-Hh-y4f" firstAttribute="centerX" secondItem="fpe-mx-5mD" secondAttribute="centerX" id="C1F-23-8ml"/>
-                                            <constraint firstItem="7wf-Hh-y4f" firstAttribute="centerY" secondItem="fpe-mx-5mD" secondAttribute="centerY" id="JAn-kg-0w1"/>
+                                            <constraint firstItem="2Dz-Wn-1Qr" firstAttribute="top" secondItem="fpe-mx-5mD" secondAttribute="top" id="04R-Zg-xNh"/>
+                                            <constraint firstAttribute="bottom" secondItem="2Dz-Wn-1Qr" secondAttribute="bottom" id="AED-nF-Fgo"/>
+                                            <constraint firstItem="2Dz-Wn-1Qr" firstAttribute="leading" secondItem="fpe-mx-5mD" secondAttribute="leading" id="BCS-pc-8US"/>
+                                            <constraint firstItem="PfT-ij-ZwX" firstAttribute="leading" secondItem="2Dz-Wn-1Qr" secondAttribute="trailing" id="Wrd-2P-7jH"/>
+                                            <constraint firstAttribute="bottom" secondItem="PfT-ij-ZwX" secondAttribute="bottom" id="i9N-wr-uUl"/>
+                                            <constraint firstAttribute="trailing" secondItem="PfT-ij-ZwX" secondAttribute="trailing" id="oCr-dP-AGk"/>
+                                            <constraint firstItem="PfT-ij-ZwX" firstAttribute="top" secondItem="fpe-mx-5mD" secondAttribute="top" id="osc-DO-Kap"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="titleLabel" destination="7wf-Hh-y4f" id="ouC-Q6-SQE"/>
+                                            <outlet property="thumbnailImageView" destination="CAO-Cn-tZt" id="sCu-hY-COG"/>
+                                            <outlet property="titleLabel" destination="VQF-FN-lFh" id="afs-Vu-Hme"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

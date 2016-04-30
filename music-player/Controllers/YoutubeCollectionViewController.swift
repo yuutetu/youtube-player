@@ -9,9 +9,11 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Haneke
 
 class YoutubeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var thumbnailImageView: UIImageView!
 }
 
 class YoutubeCollectionViewController: UIViewController {
@@ -61,11 +63,7 @@ class YoutubeCollectionViewController: UIViewController {
         // CollectionViewへの挿入処理
         moviesVariable.asDriver().drive(collectionView.rx_itemsWithCellIdentifier("BasicCell")) { (_, movie: Movie, cell: YoutubeCollectionViewCell) -> Void in
             cell.titleLabel?.text = movie.snippet.title
+            cell.thumbnailImageView?.hnk_setImageFromURL(movie.snippet.thumbnailURL)
         }.addDisposableTo(disposeBag)
-//
-//        
-//        moviesVariable.asDriver().drive(collectionView.rx_itemsWithCellIdentifier("BasicCell")) { (_, movie: Movie, cell: UICollectionViewCell) -> Void in
-//            cell.textLabel?.text = movie.snippet.title
-//        }.addDisposableTo(disposeBag)
     }
 }
