@@ -28,17 +28,7 @@ class YoutubeTableViewController: UITableViewController {
         YoutubeApiClient.defaultClient.request(YoutubeAPI.Movies.Popular).observeOn(mainScheduler).subscribe({ event in
             switch event {
             case .Next(let element):
-                do {
-                    guard let json = try NSJSONSerialization.JSONObjectWithData(element.0, options: NSJSONReadingOptions()) as? [String: AnyObject] else {
-                        print("error: 1")
-                        return
-                    }
-                    print(json)
-                    // TODO: パースしてセルを生成
-                    // TODO: セルの追加とセル数計算の更新
-                } catch _ {
-                    print("error: 2")
-                }
+                print(element.0)
             case .Completed:
                 break
             case .Error(let error):

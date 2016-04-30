@@ -8,4 +8,5 @@ target 'music-player' do
   pod 'RxSwift'
   pod 'SnapKit'
   pod 'Argo'
+  pod 'Curry'
 end

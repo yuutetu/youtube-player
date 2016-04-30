@@ -13,6 +13,12 @@
 		2045BADB1CC20B2300F3EBC6 /* YoutubeApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2045BADA1CC20B2300F3EBC6 /* YoutubeApiClient.swift */; };
 		2045BADD1CD2D5D900F3EBC6 /* YoutubeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2045BADC1CD2D5D900F3EBC6 /* YoutubeAPI.swift */; };
 		2045BAE01CD2D6B100F3EBC6 /* YoutubeAPI+Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2045BADF1CD2D6B100F3EBC6 /* YoutubeAPI+Movie.swift */; };
+		2045BAE31CD2D88400F3EBC6 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2045BAE21CD2D88400F3EBC6 /* Movie.swift */; };
+		2045BAE51CD2DC3300F3EBC6 /* MovieSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2045BAE41CD2DC3300F3EBC6 /* MovieSnippet.swift */; };
+		2045BAE81CD2F3A400F3EBC6 /* NSURL+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2045BAE71CD2F3A400F3EBC6 /* NSURL+Decodable.swift */; };
+		2045BAEA1CD2F58700F3EBC6 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2045BAE91CD2F58700F3EBC6 /* APIModel.swift */; };
+		2045BAED1CD3000300F3EBC6 /* APIMultipleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2045BAEC1CD3000300F3EBC6 /* APIMultipleResponse.swift */; };
+		2045BAEF1CD3561100F3EBC6 /* APISerializationValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2045BAEE1CD3561100F3EBC6 /* APISerializationValue.swift */; };
 		20C130F31B8850C9002B20E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C130F21B8850C9002B20E4 /* AppDelegate.swift */; };
 		20C130FA1B8850C9002B20E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C130F91B8850C9002B20E4 /* Images.xcassets */; };
 		20C130FD1B8850C9002B20E4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C130FB1B8850C9002B20E4 /* LaunchScreen.xib */; };
@@ -38,6 +44,12 @@
 		2045BADA1CC20B2300F3EBC6 /* YoutubeApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeApiClient.swift; sourceTree = "<group>"; };
 		2045BADC1CD2D5D900F3EBC6 /* YoutubeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YoutubeAPI.swift; path = "music-player/API/YoutubeAPI.swift"; sourceTree = SOURCE_ROOT; };
 		2045BADF1CD2D6B100F3EBC6 /* YoutubeAPI+Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YoutubeAPI+Movie.swift"; sourceTree = "<group>"; };
+		2045BAE21CD2D88400F3EBC6 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		2045BAE41CD2DC3300F3EBC6 /* MovieSnippet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieSnippet.swift; sourceTree = "<group>"; };
+		2045BAE71CD2F3A400F3EBC6 /* NSURL+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+Decodable.swift"; sourceTree = "<group>"; };
+		2045BAE91CD2F58700F3EBC6 /* APIModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
+		2045BAEC1CD3000300F3EBC6 /* APIMultipleResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIMultipleResponse.swift; sourceTree = "<group>"; };
+		2045BAEE1CD3561100F3EBC6 /* APISerializationValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APISerializationValue.swift; sourceTree = "<group>"; };
 		20C130ED1B8850C9002B20E4 /* music-player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "music-player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C130F11B8850C9002B20E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20C130F21B8850C9002B20E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +112,7 @@
 			children = (
 				2045BADE1CD2D68200F3EBC6 /* YoutubeAPI */,
 				2045BADA1CC20B2300F3EBC6 /* YoutubeApiClient.swift */,
+				2045BAEE1CD3561100F3EBC6 /* APISerializationValue.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -111,6 +124,34 @@
 				2045BADF1CD2D6B100F3EBC6 /* YoutubeAPI+Movie.swift */,
 			);
 			path = YoutubeAPI;
+			sourceTree = "<group>";
+		};
+		2045BAE11CD2D86400F3EBC6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2045BAEB1CD2FE6F00F3EBC6 /* APIResponse */,
+				2045BAE61CD2F36500F3EBC6 /* Transforms */,
+				2045BAE21CD2D88400F3EBC6 /* Movie.swift */,
+				2045BAE41CD2DC3300F3EBC6 /* MovieSnippet.swift */,
+				2045BAE91CD2F58700F3EBC6 /* APIModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2045BAE61CD2F36500F3EBC6 /* Transforms */ = {
+			isa = PBXGroup;
+			children = (
+				2045BAE71CD2F3A400F3EBC6 /* NSURL+Decodable.swift */,
+			);
+			path = Transforms;
+			sourceTree = "<group>";
+		};
+		2045BAEB1CD2FE6F00F3EBC6 /* APIResponse */ = {
+			isa = PBXGroup;
+			children = (
+				2045BAEC1CD3000300F3EBC6 /* APIMultipleResponse.swift */,
+			);
+			name = APIResponse;
 			sourceTree = "<group>";
 		};
 		20C130E41B8850C9002B20E4 = {
@@ -136,6 +177,7 @@
 		20C130EF1B8850C9002B20E4 /* music-player */ = {
 			isa = PBXGroup;
 			children = (
+				2045BAE11CD2D86400F3EBC6 /* Models */,
 				2045BAD91CC2094B00F3EBC6 /* API */,
 				2045BACB1CC1F92400F3EBC6 /* Controllers */,
 				2045BACC1CC1F92D00F3EBC6 /* Storyboards */,
@@ -332,11 +374,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2045BAE51CD2DC3300F3EBC6 /* MovieSnippet.swift in Sources */,
+				2045BAE31CD2D88400F3EBC6 /* Movie.swift in Sources */,
 				20C130F31B8850C9002B20E4 /* AppDelegate.swift in Sources */,
 				2045BAD41CC1FA7D00F3EBC6 /* BaseContainerViewController.swift in Sources */,
+				2045BAEA1CD2F58700F3EBC6 /* APIModel.swift in Sources */,
+				2045BAED1CD3000300F3EBC6 /* APIMultipleResponse.swift in Sources */,
 				2045BADD1CD2D5D900F3EBC6 /* YoutubeAPI.swift in Sources */,
+				2045BAEF1CD3561100F3EBC6 /* APISerializationValue.swift in Sources */,
 				2045BAD61CC1FA9700F3EBC6 /* YoutubeTableViewController.swift in Sources */,
 				2045BADB1CC20B2300F3EBC6 /* YoutubeApiClient.swift in Sources */,
+				2045BAE81CD2F3A400F3EBC6 /* NSURL+Decodable.swift in Sources */,
 				2045BAE01CD2D6B100F3EBC6 /* YoutubeAPI+Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
