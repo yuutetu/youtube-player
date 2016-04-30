@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		203ED9071CD44974001DB297 /* YoutubeCollectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203ED9061CD44974001DB297 /* YoutubeCollectionViewController.storyboard */; };
+		203ED9091CD44A31001DB297 /* YoutubeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203ED9081CD44A31001DB297 /* YoutubeCollectionViewController.swift */; };
 		2045BAD41CC1FA7D00F3EBC6 /* BaseContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2045BAD31CC1FA7D00F3EBC6 /* BaseContainerViewController.swift */; };
 		2045BAD61CC1FA9700F3EBC6 /* YoutubeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2045BAD51CC1FA9700F3EBC6 /* YoutubeTableViewController.swift */; };
 		2045BAD81CC1FEE000F3EBC6 /* BaseContainerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2045BAD71CC1FEE000F3EBC6 /* BaseContainerViewController.storyboard */; };
@@ -38,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		04DE5F6E308B52413DF51783 /* Pods-music-player.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-music-player.debug.xcconfig"; path = "Pods/Target Support Files/Pods-music-player/Pods-music-player.debug.xcconfig"; sourceTree = "<group>"; };
+		203ED9061CD44974001DB297 /* YoutubeCollectionViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YoutubeCollectionViewController.storyboard; sourceTree = "<group>"; };
+		203ED9081CD44A31001DB297 /* YoutubeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeCollectionViewController.swift; sourceTree = "<group>"; };
 		2045BAD31CC1FA7D00F3EBC6 /* BaseContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseContainerViewController.swift; sourceTree = "<group>"; };
 		2045BAD51CC1FA9700F3EBC6 /* YoutubeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeTableViewController.swift; sourceTree = "<group>"; };
 		2045BAD71CC1FEE000F3EBC6 /* BaseContainerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BaseContainerViewController.storyboard; sourceTree = "<group>"; };
@@ -90,11 +94,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		203ED90A1CD47AB7001DB297 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		2045BACB1CC1F92400F3EBC6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				2045BAD31CC1FA7D00F3EBC6 /* BaseContainerViewController.swift */,
 				2045BAD51CC1FA9700F3EBC6 /* YoutubeTableViewController.swift */,
+				203ED9081CD44A31001DB297 /* YoutubeCollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -103,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				2045BAD71CC1FEE000F3EBC6 /* BaseContainerViewController.storyboard */,
+				203ED9061CD44974001DB297 /* YoutubeCollectionViewController.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -177,6 +190,7 @@
 		20C130EF1B8850C9002B20E4 /* music-player */ = {
 			isa = PBXGroup;
 			children = (
+				203ED90A1CD47AB7001DB297 /* Utilities */,
 				2045BAE11CD2D86400F3EBC6 /* Models */,
 				2045BAD91CC2094B00F3EBC6 /* API */,
 				2045BACB1CC1F92400F3EBC6 /* Controllers */,
@@ -307,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20C130FD1B8850C9002B20E4 /* LaunchScreen.xib in Resources */,
+				203ED9071CD44974001DB297 /* YoutubeCollectionViewController.storyboard in Resources */,
 				20C130FA1B8850C9002B20E4 /* Images.xcassets in Resources */,
 				2045BAD81CC1FEE000F3EBC6 /* BaseContainerViewController.storyboard in Resources */,
 			);
@@ -384,6 +399,7 @@
 				2045BAEF1CD3561100F3EBC6 /* APISerializationValue.swift in Sources */,
 				2045BAD61CC1FA9700F3EBC6 /* YoutubeTableViewController.swift in Sources */,
 				2045BADB1CC20B2300F3EBC6 /* YoutubeApiClient.swift in Sources */,
+				203ED9091CD44A31001DB297 /* YoutubeCollectionViewController.swift in Sources */,
 				2045BAE81CD2F3A400F3EBC6 /* NSURL+Decodable.swift in Sources */,
 				2045BAE01CD2D6B100F3EBC6 /* YoutubeAPI+Movie.swift in Sources */,
 			);

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wul-0u-ocT">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Youtube Collection View Controller-->
+        <scene sceneID="9NK-5F-XXX">
+            <objects>
+                <viewController id="wul-0u-ocT" customClass="YoutubeCollectionViewController" customModule="music_player" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lt9-2L-5YD"/>
+                        <viewControllerLayoutGuide type="bottom" id="yog-fK-ane"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AeG-av-mKt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nNb-7n-tXs">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ipM-e2-fM1">
+                                    <size key="itemSize" width="547" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BasicCell" id="fpe-mx-5mD" customClass="YoutubeCollectionViewCell" customModule="music_player" customModuleProvider="target">
+                                        <rect key="frame" x="27" y="0.0" width="547" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="547" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wf-Hh-y4f">
+                                                    <rect key="frame" x="253" y="15" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="7wf-Hh-y4f" firstAttribute="centerX" secondItem="fpe-mx-5mD" secondAttribute="centerX" id="C1F-23-8ml"/>
+                                            <constraint firstItem="7wf-Hh-y4f" firstAttribute="centerY" secondItem="fpe-mx-5mD" secondAttribute="centerY" id="JAn-kg-0w1"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="7wf-Hh-y4f" id="ouC-Q6-SQE"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nNb-7n-tXs" secondAttribute="trailing" id="8fk-w6-EMh"/>
+                            <constraint firstAttribute="bottom" secondItem="nNb-7n-tXs" secondAttribute="bottom" id="Fh7-rp-iNj"/>
+                            <constraint firstItem="nNb-7n-tXs" firstAttribute="top" secondItem="AeG-av-mKt" secondAttribute="top" id="hYt-X7-eJd"/>
+                            <constraint firstItem="nNb-7n-tXs" firstAttribute="leading" secondItem="AeG-av-mKt" secondAttribute="leading" id="sxa-8j-bGS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="nNb-7n-tXs" id="k2X-Pl-YlN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HVe-nH-klv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="269" y="402"/>
+        </scene>
+    </scenes>
+</document>

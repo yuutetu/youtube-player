@@ -1,8 +1,8 @@
 //
-//  YoutubeTableViewController.swift
+//  YoutubeCollectionViewController.swift
 //  music-player
 //
-//  Created by 加賀江　優幸 on 2016/04/16.
+//  Created by 加賀江　優幸 on 2016/04/30.
 //  Copyright © 2016年 加賀江　優幸. All rights reserved.
 //
 
@@ -10,12 +10,18 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class YoutubeTableViewController: UITableViewController {
+class YoutubeCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var titleLabel: UILabel!
+}
+
+class YoutubeCollectionViewController: UIViewController {
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     let disposeBag = DisposeBag()
     private(set) var moviesVariable: Variable<[Movie]> = Variable([Movie]())
     
-    static func viewController() -> YoutubeTableViewController {
-        return YoutubeTableViewController(style: .Plain)
+    static func viewController() -> YoutubeCollectionViewController {
+        return UIStoryboard(name: "YoutubeCollectionViewController", bundle: nil).instantiateInitialViewController() as! YoutubeCollectionViewController
     }
     
     override func viewDidLoad() {
@@ -52,12 +58,14 @@ class YoutubeTableViewController: UITableViewController {
             }
         }).addDisposableTo(disposeBag)
         
-        // TableViewへの挿入処理
-        moviesVariable.asDriver().drive(tableView.rx_itemsWithCellIdentifier("BasicCell")) { (_, movie: Movie, cell: UITableViewCell) -> Void in
-            cell.textLabel?.text = movie.snippet.title
+        // CollectionViewへの挿入処理
+        moviesVariable.asDriver().drive(collectionView.rx_itemsWithCellIdentifier("BasicCell")) { (_, movie: Movie, cell: YoutubeCollectionViewCell) -> Void in
+            cell.titleLabel?.text = movie.snippet.title
         }.addDisposableTo(disposeBag)
-        
-        // cellの初期設定
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "BasicCell")
+//
+//        
+//        moviesVariable.asDriver().drive(collectionView.rx_itemsWithCellIdentifier("BasicCell")) { (_, movie: Movie, cell: UICollectionViewCell) -> Void in
+//            cell.textLabel?.text = movie.snippet.title
+//        }.addDisposableTo(disposeBag)
     }
 }
