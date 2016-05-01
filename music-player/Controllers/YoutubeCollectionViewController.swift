@@ -65,5 +65,17 @@ class YoutubeCollectionViewController: UIViewController {
             cell.titleLabel?.text = movie.snippet.title
             cell.thumbnailImageView?.hnk_setImageFromURL(movie.snippet.thumbnailURL)
         }.addDisposableTo(disposeBag)
+        
+        collectionView.rx_delegate.setForwardToDelegate(self, retainDelegate: false)
+    }
+}
+
+extension YoutubeCollectionViewController: UICollectionViewDelegate {
+    
+}
+
+extension YoutubeCollectionViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSize(width: collectionView.bounds.width, height: 100)
     }
 }
