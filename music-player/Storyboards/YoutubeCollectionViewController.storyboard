@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Youtube Collection View Controller-->
@@ -20,8 +21,8 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nNb-7n-tXs">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="10" id="ipM-e2-fM1">
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ipM-e2-fM1">
                                     <size key="itemSize" width="547" height="200"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -36,16 +37,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PfT-ij-ZwX">
-                                                    <rect key="frame" x="267" y="0.0" width="280" height="200"/>
+                                                    <rect key="frame" x="277" y="0.0" width="260" height="200"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQF-FN-lFh">
-                                                            <rect key="frame" x="10" y="10" width="260" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQF-FN-lFh">
+                                                            <rect key="frame" x="10" y="10" width="240" height="15"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="VQF-FN-lFh" firstAttribute="leading" secondItem="PfT-ij-ZwX" secondAttribute="leading" constant="10" id="M2z-UU-rgJ"/>
                                                         <constraint firstItem="VQF-FN-lFh" firstAttribute="top" secondItem="PfT-ij-ZwX" secondAttribute="top" constant="10" id="XLE-NN-EMr"/>
@@ -53,10 +53,15 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Dz-Wn-1Qr">
-                                                    <rect key="frame" x="0.0" y="0.0" width="267" height="200"/>
+                                                    <rect key="frame" x="10" y="0.0" width="267" height="200"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CAO-Cn-tZt">
                                                             <rect key="frame" x="0.0" y="0.0" width="267" height="200"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -71,16 +76,25 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="2Dz-Wn-1Qr" firstAttribute="top" secondItem="fpe-mx-5mD" secondAttribute="top" id="04R-Zg-xNh"/>
                                             <constraint firstAttribute="bottom" secondItem="2Dz-Wn-1Qr" secondAttribute="bottom" id="AED-nF-Fgo"/>
                                             <constraint firstItem="2Dz-Wn-1Qr" firstAttribute="leading" secondItem="fpe-mx-5mD" secondAttribute="leading" id="BCS-pc-8US"/>
+                                            <constraint firstItem="2Dz-Wn-1Qr" firstAttribute="leading" secondItem="fpe-mx-5mD" secondAttribute="leadingMargin" id="DwG-e3-GTW"/>
                                             <constraint firstItem="PfT-ij-ZwX" firstAttribute="leading" secondItem="2Dz-Wn-1Qr" secondAttribute="trailing" id="Wrd-2P-7jH"/>
                                             <constraint firstAttribute="bottom" secondItem="PfT-ij-ZwX" secondAttribute="bottom" id="i9N-wr-uUl"/>
                                             <constraint firstAttribute="trailing" secondItem="PfT-ij-ZwX" secondAttribute="trailing" id="oCr-dP-AGk"/>
                                             <constraint firstItem="PfT-ij-ZwX" firstAttribute="top" secondItem="fpe-mx-5mD" secondAttribute="top" id="osc-DO-Kap"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="PfT-ij-ZwX" secondAttribute="trailing" id="tCf-TZ-v69"/>
                                         </constraints>
+                                        <edgeInsets key="layoutMargins" top="8" left="10" bottom="8" right="10"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="BCS-pc-8US"/>
+                                                <exclude reference="oCr-dP-AGk"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <outlet property="thumbnailImageView" destination="CAO-Cn-tZt" id="sCu-hY-COG"/>
                                             <outlet property="titleLabel" destination="VQF-FN-lFh" id="afs-Vu-Hme"/>
@@ -93,9 +107,15 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="nNb-7n-tXs" secondAttribute="trailing" id="8fk-w6-EMh"/>
                             <constraint firstAttribute="bottom" secondItem="nNb-7n-tXs" secondAttribute="bottom" id="Fh7-rp-iNj"/>
+                            <constraint firstItem="nNb-7n-tXs" firstAttribute="top" secondItem="AeG-av-mKt" secondAttribute="top" id="U6p-bO-Wxn"/>
                             <constraint firstItem="nNb-7n-tXs" firstAttribute="top" secondItem="AeG-av-mKt" secondAttribute="top" id="hYt-X7-eJd"/>
                             <constraint firstItem="nNb-7n-tXs" firstAttribute="leading" secondItem="AeG-av-mKt" secondAttribute="leading" id="sxa-8j-bGS"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="hYt-X7-eJd"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="nNb-7n-tXs" id="k2X-Pl-YlN"/>
