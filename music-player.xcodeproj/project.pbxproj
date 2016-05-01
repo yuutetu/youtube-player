@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		203ED9071CD44974001DB297 /* YoutubeCollectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203ED9061CD44974001DB297 /* YoutubeCollectionViewController.storyboard */; };
 		203ED9091CD44A31001DB297 /* YoutubeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203ED9081CD44A31001DB297 /* YoutubeCollectionViewController.swift */; };
-		203ED9141CD5948D001DB297 /* UICollectionView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203ED9131CD5948D001DB297 /* UICollectionView+Rx.swift */; };
 		2045BAD41CC1FA7D00F3EBC6 /* BaseContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2045BAD31CC1FA7D00F3EBC6 /* BaseContainerViewController.swift */; };
-		2045BAD61CC1FA9700F3EBC6 /* YoutubeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2045BAD51CC1FA9700F3EBC6 /* YoutubeTableViewController.swift */; };
 		2045BAD81CC1FEE000F3EBC6 /* BaseContainerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2045BAD71CC1FEE000F3EBC6 /* BaseContainerViewController.storyboard */; };
 		2045BADB1CC20B2300F3EBC6 /* YoutubeApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2045BADA1CC20B2300F3EBC6 /* YoutubeApiClient.swift */; };
 		2045BADD1CD2D5D900F3EBC6 /* YoutubeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2045BADC1CD2D5D900F3EBC6 /* YoutubeAPI.swift */; };
@@ -43,9 +41,7 @@
 		04DE5F6E308B52413DF51783 /* Pods-music-player.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-music-player.debug.xcconfig"; path = "Pods/Target Support Files/Pods-music-player/Pods-music-player.debug.xcconfig"; sourceTree = "<group>"; };
 		203ED9061CD44974001DB297 /* YoutubeCollectionViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YoutubeCollectionViewController.storyboard; sourceTree = "<group>"; };
 		203ED9081CD44A31001DB297 /* YoutubeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeCollectionViewController.swift; sourceTree = "<group>"; };
-		203ED9131CD5948D001DB297 /* UICollectionView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Rx.swift"; path = "Rx/UICollectionView+Rx.swift"; sourceTree = SOURCE_ROOT; };
 		2045BAD31CC1FA7D00F3EBC6 /* BaseContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseContainerViewController.swift; sourceTree = "<group>"; };
-		2045BAD51CC1FA9700F3EBC6 /* YoutubeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeTableViewController.swift; sourceTree = "<group>"; };
 		2045BAD71CC1FEE000F3EBC6 /* BaseContainerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BaseContainerViewController.storyboard; sourceTree = "<group>"; };
 		2045BADA1CC20B2300F3EBC6 /* YoutubeApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeApiClient.swift; sourceTree = "<group>"; };
 		2045BADC1CD2D5D900F3EBC6 /* YoutubeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YoutubeAPI.swift; path = "music-player/API/YoutubeAPI.swift"; sourceTree = SOURCE_ROOT; };
@@ -107,7 +103,6 @@
 		203ED9121CD593F0001DB297 /* Rx */ = {
 			isa = PBXGroup;
 			children = (
-				203ED9131CD5948D001DB297 /* UICollectionView+Rx.swift */,
 			);
 			path = Rx;
 			sourceTree = "<group>";
@@ -116,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				2045BAD31CC1FA7D00F3EBC6 /* BaseContainerViewController.swift */,
-				2045BAD51CC1FA9700F3EBC6 /* YoutubeTableViewController.swift */,
 				203ED9081CD44A31001DB297 /* YoutubeCollectionViewController.swift */,
 			);
 			path = Controllers;
@@ -408,9 +402,7 @@
 				2045BAED1CD3000300F3EBC6 /* APIMultipleResponse.swift in Sources */,
 				2045BADD1CD2D5D900F3EBC6 /* YoutubeAPI.swift in Sources */,
 				2045BAEF1CD3561100F3EBC6 /* APISerializationValue.swift in Sources */,
-				2045BAD61CC1FA9700F3EBC6 /* YoutubeTableViewController.swift in Sources */,
 				2045BADB1CC20B2300F3EBC6 /* YoutubeApiClient.swift in Sources */,
-				203ED9141CD5948D001DB297 /* UICollectionView+Rx.swift in Sources */,
 				203ED9091CD44A31001DB297 /* YoutubeCollectionViewController.swift in Sources */,
 				2045BAE81CD2F3A400F3EBC6 /* NSURL+Decodable.swift in Sources */,
 				2045BAE01CD2D6B100F3EBC6 /* YoutubeAPI+Movie.swift in Sources */,
