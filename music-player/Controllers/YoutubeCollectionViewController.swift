@@ -36,8 +36,7 @@ class YoutubeCollectionViewController: UIViewController {
         // TODO: DataSourceとViewModelの構成にしたい
         
         // 読み込み処理
-        let mainScheduler: SerialDispatchQueueScheduler = MainScheduler.instance
-        YoutubeApiClient.defaultClient.request(YoutubeAPI.Movies.Search(query: "splatoon")).observeOn(mainScheduler).subscribe({ event in
+        YoutubeApiClient.defaultClient.request(YoutubeAPI.Movies.Search(query: "splatoon")).subscribe({ event in
             switch event {
             case .Next(let element):
                 // 一覧データセット
