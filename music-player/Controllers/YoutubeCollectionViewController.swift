@@ -37,7 +37,7 @@ class YoutubeCollectionViewController: UIViewController {
         
         // 読み込み処理
         let mainScheduler: SerialDispatchQueueScheduler = MainScheduler.instance
-        YoutubeApiClient.defaultClient.request(YoutubeAPI.Movies.Popular).observeOn(mainScheduler).subscribe({ event in
+        YoutubeApiClient.defaultClient.request(YoutubeAPI.Movies.Search(query: "splatoon")).observeOn(mainScheduler).subscribe({ event in
             switch event {
             case .Next(let element):
                 // 一覧データセット
@@ -61,9 +61,15 @@ class YoutubeCollectionViewController: UIViewController {
         }).addDisposableTo(disposeBag)
         
         // CollectionViewへの挿入処理
-        moviesVariable.asDriver().drive(collectionView.rx_itemsWithCellIdentifier("BasicCell")) { (_, movie: Movie, cell: YoutubeCollectionViewCell) -> Void in
+        moviesVariable.asDriver().drive(collectionView.rx_itemsWithCellFactory) { (collectionView, index, movie) in
+            let indexPath = NSIndexPath(forItem: index, inSection: 0)
+            if index == collectionView.numberOfItemsInSection(0) - 1 {
+                print("loadMore")
+            }
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("BasicCell", forIndexPath: indexPath) as! YoutubeCollectionViewCell
             cell.titleLabel?.text = movie.snippet.title
             cell.thumbnailImageView?.hnk_setImageFromURL(movie.snippet.thumbnailURL)
+            return cell as UICollectionViewCell
         }.addDisposableTo(disposeBag)
         
         collectionView.rx_delegate.setForwardToDelegate(self, retainDelegate: false)

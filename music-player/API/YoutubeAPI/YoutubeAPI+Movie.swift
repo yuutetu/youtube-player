@@ -12,6 +12,7 @@ import Foundation
 extension YoutubeAPI {
     enum Movies: YoutubeAPIRequest {
         case Popular
+        case Search(query: String)
         
         typealias ModelType = APIMultipleResponse<Movie>
         
@@ -19,6 +20,8 @@ extension YoutubeAPI {
             switch self {
             case .Popular:
                 return "https://www.googleapis.com/youtube/v3/videos?part=id,snippet&chart=mostpopular"
+            case .Search(let query):
+                return "https://www.googleapis.com/youtube/v3/search?part=id,snippet&q=\(query)"
             }
         }
         
