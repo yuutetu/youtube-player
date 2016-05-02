@@ -11,7 +11,6 @@ import RxCocoa
 import Argo
 
 class YoutubeApiClient: NSObject {
-//    typealias ModelType
     static let defaultClient = YoutubeApiClient()
     let apiKey = "AIzaSyDLRGv2WnJZNzg1LvE4tbASEox3kbDsQVU"
     

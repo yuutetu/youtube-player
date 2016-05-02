@@ -14,8 +14,6 @@ extension YoutubeAPI {
         case Popular
         case Search(query: String)
         
-        typealias ModelType = APIMultipleResponse<Movie>
-        
         var requestURL: String {
             switch self {
             case .Popular:
