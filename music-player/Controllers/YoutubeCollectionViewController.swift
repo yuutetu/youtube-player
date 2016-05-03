@@ -25,7 +25,6 @@ class YoutubeCollectionViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     let disposeBag = DisposeBag()
-    private(set) var moviesVariable: Variable<[Movie]> = Variable([Movie]())
     private(set) var dataSource: APIDataSource<Movie>?
     
     static func viewController() -> YoutubeCollectionViewController {

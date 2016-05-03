@@ -11,6 +11,7 @@
 		203ED9091CD44A31001DB297 /* YoutubeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203ED9081CD44A31001DB297 /* YoutubeCollectionViewController.swift */; };
 		203ED91A1CD7D6F8001DB297 /* APIDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203ED9191CD7D6F8001DB297 /* APIDataSource.swift */; };
 		203ED91C1CD7DDF3001DB297 /* String+Excape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203ED91B1CD7DDF3001DB297 /* String+Excape.swift */; };
+		203ED9201CD8F459001DB297 /* MyPlayListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203ED91F1CD8F459001DB297 /* MyPlayListTableViewController.swift */; };
 		2045BAD41CC1FA7D00F3EBC6 /* BaseContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2045BAD31CC1FA7D00F3EBC6 /* BaseContainerViewController.swift */; };
 		2045BAD81CC1FEE000F3EBC6 /* BaseContainerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2045BAD71CC1FEE000F3EBC6 /* BaseContainerViewController.storyboard */; };
 		2045BADB1CC20B2300F3EBC6 /* YoutubeApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2045BADA1CC20B2300F3EBC6 /* YoutubeApiClient.swift */; };
@@ -45,6 +46,7 @@
 		203ED9081CD44A31001DB297 /* YoutubeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeCollectionViewController.swift; sourceTree = "<group>"; };
 		203ED9191CD7D6F8001DB297 /* APIDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIDataSource.swift; sourceTree = "<group>"; };
 		203ED91B1CD7DDF3001DB297 /* String+Excape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Excape.swift"; path = "music-player/DataSources/String+Excape.swift"; sourceTree = SOURCE_ROOT; };
+		203ED91F1CD8F459001DB297 /* MyPlayListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlayListTableViewController.swift; sourceTree = "<group>"; };
 		2045BAD31CC1FA7D00F3EBC6 /* BaseContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseContainerViewController.swift; sourceTree = "<group>"; };
 		2045BAD71CC1FEE000F3EBC6 /* BaseContainerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BaseContainerViewController.storyboard; sourceTree = "<group>"; };
 		2045BADA1CC20B2300F3EBC6 /* YoutubeApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeApiClient.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			children = (
 				2045BAD31CC1FA7D00F3EBC6 /* BaseContainerViewController.swift */,
 				203ED9081CD44A31001DB297 /* YoutubeCollectionViewController.swift */,
+				203ED91F1CD8F459001DB297 /* MyPlayListTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				2045BADB1CC20B2300F3EBC6 /* YoutubeApiClient.swift in Sources */,
 				203ED9091CD44A31001DB297 /* YoutubeCollectionViewController.swift in Sources */,
 				2045BAE81CD2F3A400F3EBC6 /* NSURL+Decodable.swift in Sources */,
+				203ED9201CD8F459001DB297 /* MyPlayListTableViewController.swift in Sources */,
 				2045BAE01CD2D6B100F3EBC6 /* YoutubeAPI+Movie.swift in Sources */,
 				203ED91A1CD7D6F8001DB297 /* APIDataSource.swift in Sources */,
 			);

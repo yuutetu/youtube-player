@@ -19,7 +19,8 @@ class BaseContainerViewController: UIViewController {
     }
     
     func setupContents() {
-        let viewController = YoutubeCollectionViewController.viewController()
+        let contentViewController = MyPlayListTableViewController.viewController()
+        let viewController = UINavigationController(rootViewController: contentViewController)
         addChildViewController(viewController)
         containerView.addSubview(viewController.view)
         viewController.view.snp_makeConstraints { make in
