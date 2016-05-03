@@ -11,10 +11,13 @@ import Curry
 
 struct APIMultipleResponse<T: APIModel where T.DecodedType == T> {
     let items: [T]
+    let nextPageToken: String
 }
 
 extension APIMultipleResponse: APIModel {
     static func decode(json: JSON) -> Decoded<APIMultipleResponse<T>> {
-        return curry(self.init) <^> json <|| "items"
+        return curry(self.init)
+            <^> json <|| "items"
+            <*> json <| "nextPageToken"
     }
 }

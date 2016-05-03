@@ -14,9 +14,16 @@ class YoutubeApiClient: NSObject {
     static let defaultClient = YoutubeApiClient()
     let apiKey = "AIzaSyDLRGv2WnJZNzg1LvE4tbASEox3kbDsQVU"
     
-    func request(youtubeAPIRequest: YoutubeAPIRequest) -> Observable<(Decoded<APISerializationValue>, NSHTTPURLResponse)> {
+    func request(youtubeAPIRequest: YoutubeAPIRequest, pageToken: String? = nil) -> Observable<(Decoded<APISerializationValue>, NSHTTPURLResponse)> {
         // TODO: エンドポイントの切り替え, パース処理, ログイン認証
-        let request = NSURLRequest(URL: NSURL(string: "\(youtubeAPIRequest.requestURL)&key=\(apiKey)")!)
+        let url: NSURL = {
+            var url = "\(youtubeAPIRequest.requestURL)&key=\(apiKey)"
+            if let pageToken = pageToken {
+                url = url + "&pageToken=\(pageToken)"
+            }
+            return NSURL(string: url)!
+        }()
+        let request = NSURLRequest(URL: url)
         let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
         let session = NSURLSession(configuration: configuration)
         return session.rx_response(request).map({ (data: NSData, response: NSHTTPURLResponse) -> (Decoded<APISerializationValue>, NSHTTPURLResponse) in

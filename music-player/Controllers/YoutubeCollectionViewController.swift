@@ -14,6 +14,11 @@ import Haneke
 class YoutubeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var thumbnailImageView: UIImageView!
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        thumbnailImageView.image = nil
+    }
 }
 
 class YoutubeCollectionViewController: UIViewController {
@@ -21,6 +26,7 @@ class YoutubeCollectionViewController: UIViewController {
     
     let disposeBag = DisposeBag()
     private(set) var moviesVariable: Variable<[Movie]> = Variable([Movie]())
+    private(set) var dataSource: APIDataSource<Movie>?
     
     static func viewController() -> YoutubeCollectionViewController {
         return UIStoryboard(name: "YoutubeCollectionViewController", bundle: nil).instantiateInitialViewController() as! YoutubeCollectionViewController
@@ -36,34 +42,11 @@ class YoutubeCollectionViewController: UIViewController {
         // TODO: DataSourceとViewModelの構成にしたい
         
         // 読み込み処理
-        YoutubeApiClient.defaultClient.request(YoutubeAPI.Movies.Search(query: "splatoon")).subscribe({ event in
-            switch event {
-            case .Next(let element):
-                // 一覧データセット
-                switch element.0 {
-                case .Success(let movies):
-                    self.moviesVariable.value = (movies as! APIMultipleResponse<Movie>).items
-                case .Failure:
-                    self.moviesVariable.value = []
-                    // エラー文章セット
-                    break
-                }
-            case .Completed:
-                // isLoading = false
-                break
-            case .Error(let error):
-                self.moviesVariable.value = []
-                // エラー文章セット
-                // isLoading = false
-                print(error)
-            }
-        }).addDisposableTo(disposeBag)
-        
-        // CollectionViewへの挿入処理
-        moviesVariable.asDriver().drive(collectionView.rx_itemsWithCellFactory) { (collectionView, index, movie) in
+        let dataSource = APIDataSource<Movie>(request: YoutubeAPI.Movies.Search(query: "東方 bgm".escapeStr()))
+        dataSource.models.asDriver().drive(collectionView.rx_itemsWithCellFactory) { (collectionView, index, movie) in
             let indexPath = NSIndexPath(forItem: index, inSection: 0)
-            if index == collectionView.numberOfItemsInSection(0) - 1 {
-                print("loadMore")
+            if index == collectionView.numberOfItemsInSection(0) - 5 {
+                self.dataSource?.next()
             }
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier("BasicCell", forIndexPath: indexPath) as! YoutubeCollectionViewCell
             cell.titleLabel?.text = movie.snippet.title
@@ -72,6 +55,9 @@ class YoutubeCollectionViewController: UIViewController {
         }.addDisposableTo(disposeBag)
         
         collectionView.rx_delegate.setForwardToDelegate(self, retainDelegate: false)
+        
+        dataSource.load()
+        self.dataSource = dataSource
     }
 }
 
