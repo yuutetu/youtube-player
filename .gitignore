@@ -12,7 +12,7 @@ xcuserdata/
 Carthage/
 
 # CocoaPods
-Pods/
+# Pods/
 
 # Ruby Gems
 .bundle/
