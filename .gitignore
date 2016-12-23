@@ -1,0 +1,19 @@
+# Xcode
+DerivedData/
+build/
+project.xcworkspace/
+xcuserdata/
+*.DS_Store
+*~
+*.xccheckout
+.idea/
+
+# Carthage
+Carthage/
+
+# CocoaPods
+Pods/
+
+# Ruby Gems
+.bundle/
+vendor/
