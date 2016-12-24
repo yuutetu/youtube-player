@@ -16,7 +16,10 @@
 		20C80B2E1E0C30AB00961C25 /* MusicPlayer2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C80B2D1E0C30AB00961C25 /* MusicPlayer2Tests.swift */; };
 		20C80B391E0C30AB00961C25 /* MusicPlayer2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C80B381E0C30AB00961C25 /* MusicPlayer2UITests.swift */; };
 		20C80B491E0CC8C900961C25 /* PlayerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C80B481E0CC8C900961C25 /* PlayerContainerViewController.swift */; };
-		20C80B4B1E0CC8DA00961C25 /* PlayerContainerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C80B4A1E0CC8DA00961C25 /* PlayerContainerViewController.storyboard */; };
+		20C80B4D1E0EB7CC00961C25 /* MusicListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C80B4C1E0EB7CC00961C25 /* MusicListCollectionViewController.swift */; };
+		20C80B511E0ED57400961C25 /* MusicItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C80B501E0ED57400961C25 /* MusicItemCollectionViewCell.swift */; };
+		20C80B531E0ED98500961C25 /* PlayerContainerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C80B521E0ED98500961C25 /* PlayerContainerViewController.storyboard */; };
+		20C80B551E0ED9B900961C25 /* MusicListCollectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C80B541E0ED9B900961C25 /* MusicListCollectionViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +55,10 @@
 		20C80B381E0C30AB00961C25 /* MusicPlayer2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer2UITests.swift; sourceTree = "<group>"; };
 		20C80B3A1E0C30AB00961C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20C80B481E0CC8C900961C25 /* PlayerContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerContainerViewController.swift; sourceTree = "<group>"; };
-		20C80B4A1E0CC8DA00961C25 /* PlayerContainerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlayerContainerViewController.storyboard; sourceTree = "<group>"; };
+		20C80B4C1E0EB7CC00961C25 /* MusicListCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicListCollectionViewController.swift; sourceTree = "<group>"; };
+		20C80B501E0ED57400961C25 /* MusicItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		20C80B521E0ED98500961C25 /* PlayerContainerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlayerContainerViewController.storyboard; sourceTree = "<group>"; };
+		20C80B541E0ED9B900961C25 /* MusicListCollectionViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MusicListCollectionViewController.storyboard; sourceTree = "<group>"; };
 		319608CD163A93E2AC26CF0D /* Pods-MusicPlayer2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicPlayer2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicPlayer2/Pods-MusicPlayer2.debug.xcconfig"; sourceTree = "<group>"; };
 		ACC42F8500E3C6860C41996E /* Pods_MusicPlayer2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicPlayer2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -157,8 +163,11 @@
 			children = (
 				20C80B1C1E0C30AB00961C25 /* RootViewController.storyboard */,
 				20C80B1A1E0C30AB00961C25 /* RootViewController.swift */,
+				20C80B521E0ED98500961C25 /* PlayerContainerViewController.storyboard */,
 				20C80B481E0CC8C900961C25 /* PlayerContainerViewController.swift */,
-				20C80B4A1E0CC8DA00961C25 /* PlayerContainerViewController.storyboard */,
+				20C80B541E0ED9B900961C25 /* MusicListCollectionViewController.storyboard */,
+				20C80B4C1E0EB7CC00961C25 /* MusicListCollectionViewController.swift */,
+				20C80B501E0ED57400961C25 /* MusicItemCollectionViewCell.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -285,8 +294,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				20C80B231E0C30AB00961C25 /* LaunchScreen.storyboard in Resources */,
+				20C80B551E0ED9B900961C25 /* MusicListCollectionViewController.storyboard in Resources */,
+				20C80B531E0ED98500961C25 /* PlayerContainerViewController.storyboard in Resources */,
 				20C80B201E0C30AB00961C25 /* Assets.xcassets in Resources */,
-				20C80B4B1E0CC8DA00961C25 /* PlayerContainerViewController.storyboard in Resources */,
 				20C80B1E1E0C30AB00961C25 /* RootViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +372,8 @@
 			files = (
 				20C80B1B1E0C30AB00961C25 /* RootViewController.swift in Sources */,
 				20C80B191E0C30AB00961C25 /* AppDelegate.swift in Sources */,
+				20C80B4D1E0EB7CC00961C25 /* MusicListCollectionViewController.swift in Sources */,
+				20C80B511E0ED57400961C25 /* MusicItemCollectionViewCell.swift in Sources */,
 				20C80B491E0CC8C900961C25 /* PlayerContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

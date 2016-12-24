@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SnapKit
 
 class PlayerPresenter {
     var displayingPlayerView: Variable<Bool> {
@@ -30,11 +31,21 @@ class PlayerContainerViewController: UIViewController {
     
     func inject(presenter: PlayerPresenter) {
         self.presenter = presenter
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        _ = view // Load view
-        presenter.displayingPlayerView.asDriver()
+        presenter?.displayingPlayerView.asDriver()
             .map{ !$0 }.drive(playerView.rx.isHidden)
             .addDisposableTo(disposeBag)
+        
+        let viewController = MusicListCollectionViewController.viewController()
+        addChildViewController(viewController)
+        containerView.addSubview(viewController.view)
+        viewController.view.snp.makeConstraints { (make) in
+            make.edges.equalTo(0)
+        }
     }
 
     // TODO: Containerの設定
