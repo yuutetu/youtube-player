@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		03D2254C31389DACFED61DC8 /* Pods_MusicPlayer2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC42F8500E3C6860C41996E /* Pods_MusicPlayer2.framework */; };
 		20C80B191E0C30AB00961C25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C80B181E0C30AB00961C25 /* AppDelegate.swift */; };
-		20C80B1B1E0C30AB00961C25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C80B1A1E0C30AB00961C25 /* ViewController.swift */; };
-		20C80B1E1E0C30AB00961C25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C80B1C1E0C30AB00961C25 /* Main.storyboard */; };
+		20C80B1B1E0C30AB00961C25 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C80B1A1E0C30AB00961C25 /* RootViewController.swift */; };
+		20C80B1E1E0C30AB00961C25 /* RootViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C80B1C1E0C30AB00961C25 /* RootViewController.storyboard */; };
 		20C80B201E0C30AB00961C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C80B1F1E0C30AB00961C25 /* Assets.xcassets */; };
 		20C80B231E0C30AB00961C25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C80B211E0C30AB00961C25 /* LaunchScreen.storyboard */; };
 		20C80B2E1E0C30AB00961C25 /* MusicPlayer2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C80B2D1E0C30AB00961C25 /* MusicPlayer2Tests.swift */; };
 		20C80B391E0C30AB00961C25 /* MusicPlayer2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C80B381E0C30AB00961C25 /* MusicPlayer2UITests.swift */; };
+		20C80B491E0CC8C900961C25 /* PlayerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C80B481E0CC8C900961C25 /* PlayerContainerViewController.swift */; };
+		20C80B4B1E0CC8DA00961C25 /* PlayerContainerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C80B4A1E0CC8DA00961C25 /* PlayerContainerViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +40,8 @@
 		1F641F029768C8381058392B /* Pods-MusicPlayer2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicPlayer2.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicPlayer2/Pods-MusicPlayer2.release.xcconfig"; sourceTree = "<group>"; };
 		20C80B151E0C30AB00961C25 /* MusicPlayer2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C80B181E0C30AB00961C25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		20C80B1A1E0C30AB00961C25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		20C80B1D1E0C30AB00961C25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		20C80B1A1E0C30AB00961C25 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		20C80B1D1E0C30AB00961C25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RootViewController.storyboard; sourceTree = "<group>"; };
 		20C80B1F1E0C30AB00961C25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20C80B221E0C30AB00961C25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20C80B241E0C30AB00961C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		20C80B341E0C30AB00961C25 /* MusicPlayer2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicPlayer2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C80B381E0C30AB00961C25 /* MusicPlayer2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer2UITests.swift; sourceTree = "<group>"; };
 		20C80B3A1E0C30AB00961C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20C80B481E0CC8C900961C25 /* PlayerContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerContainerViewController.swift; sourceTree = "<group>"; };
+		20C80B4A1E0CC8DA00961C25 /* PlayerContainerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlayerContainerViewController.storyboard; sourceTree = "<group>"; };
 		319608CD163A93E2AC26CF0D /* Pods-MusicPlayer2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicPlayer2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicPlayer2/Pods-MusicPlayer2.debug.xcconfig"; sourceTree = "<group>"; };
 		ACC42F8500E3C6860C41996E /* Pods_MusicPlayer2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicPlayer2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -113,9 +117,8 @@
 		20C80B171E0C30AB00961C25 /* MusicPlayer2 */ = {
 			isa = PBXGroup;
 			children = (
+				20C80B461E0CB90000961C25 /* Presentation */,
 				20C80B181E0C30AB00961C25 /* AppDelegate.swift */,
-				20C80B1A1E0C30AB00961C25 /* ViewController.swift */,
-				20C80B1C1E0C30AB00961C25 /* Main.storyboard */,
 				20C80B1F1E0C30AB00961C25 /* Assets.xcassets */,
 				20C80B211E0C30AB00961C25 /* LaunchScreen.storyboard */,
 				20C80B241E0C30AB00961C25 /* Info.plist */,
@@ -139,6 +142,25 @@
 				20C80B3A1E0C30AB00961C25 /* Info.plist */,
 			);
 			path = MusicPlayer2UITests;
+			sourceTree = "<group>";
+		};
+		20C80B461E0CB90000961C25 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				20C80B471E0CBA0D00961C25 /* UI */,
+			);
+			name = Presentation;
+			sourceTree = "<group>";
+		};
+		20C80B471E0CBA0D00961C25 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				20C80B1C1E0C30AB00961C25 /* RootViewController.storyboard */,
+				20C80B1A1E0C30AB00961C25 /* RootViewController.swift */,
+				20C80B481E0CC8C900961C25 /* PlayerContainerViewController.swift */,
+				20C80B4A1E0CC8DA00961C25 /* PlayerContainerViewController.storyboard */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 		F69B0D260D81620D314B3E27 /* Frameworks */ = {
@@ -264,7 +286,8 @@
 			files = (
 				20C80B231E0C30AB00961C25 /* LaunchScreen.storyboard in Resources */,
 				20C80B201E0C30AB00961C25 /* Assets.xcassets in Resources */,
-				20C80B1E1E0C30AB00961C25 /* Main.storyboard in Resources */,
+				20C80B4B1E0CC8DA00961C25 /* PlayerContainerViewController.storyboard in Resources */,
+				20C80B1E1E0C30AB00961C25 /* RootViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,8 +360,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20C80B1B1E0C30AB00961C25 /* ViewController.swift in Sources */,
+				20C80B1B1E0C30AB00961C25 /* RootViewController.swift in Sources */,
 				20C80B191E0C30AB00961C25 /* AppDelegate.swift in Sources */,
+				20C80B491E0CC8C900961C25 /* PlayerContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,12 +398,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		20C80B1C1E0C30AB00961C25 /* Main.storyboard */ = {
+		20C80B1C1E0C30AB00961C25 /* RootViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				20C80B1D1E0C30AB00961C25 /* Base */,
 			);
-			name = Main.storyboard;
+			name = RootViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		20C80B211E0C30AB00961C25 /* LaunchScreen.storyboard */ = {
@@ -591,6 +615,7 @@
 				20C80B3F1E0C30AB00961C25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20C80B401E0C30AB00961C25 /* Build configuration list for PBXNativeTarget "MusicPlayer2Tests" */ = {
 			isa = XCConfigurationList;
@@ -599,6 +624,7 @@
 				20C80B421E0C30AB00961C25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20C80B431E0C30AB00961C25 /* Build configuration list for PBXNativeTarget "MusicPlayer2UITests" */ = {
 			isa = XCConfigurationList;
@@ -607,6 +633,7 @@
 				20C80B451E0C30AB00961C25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
