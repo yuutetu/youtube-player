@@ -13,6 +13,7 @@ import RxCocoa
 class MusicListCollectionViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     let disposeBag = DisposeBag()
+    let values = Variable(["a", "b", "c", "a", "b", "c", "a", "b", "c", "a", "b", "c", "a", "b", "c", "a", "b", "c", "a", "b", "c", "a", "b", "c", "a", "b", "c", "a", "b", "c", "a", "b", "c", "a", "b", "c", "a", "b", "c", "a", "b", "c", "a", "b", "c", "a", "b", "c", "a", "b", "c", "a", "b", "c", "a", "b", "c", "a", "b", "c", "a", "b", "c", "a", "b", "c", "a", "b", "c", "a", "b", "c", "a", "b", "c"])
     
     static func viewController() -> MusicListCollectionViewController {
         return UIStoryboard(name: "MusicListCollectionViewController", bundle: nil).instantiateInitialViewController() as! MusicListCollectionViewController
@@ -21,9 +22,9 @@ class MusicListCollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Variable(["a", "b", "c"]).asDriver().drive(collectionView.rx.items(cellIdentifier: "ItemCell")) {
-            (index: Int, model: String, cell: UICollectionViewCell) -> Void in
-            (cell as! MusicItemCollectionViewCell).titleLabel.text = model
+        values.asDriver().drive(collectionView.rx.items(cellIdentifier: "ItemCell", cellType: MusicItemCollectionViewCell.self)) {
+            (index: Int, model: String, cell: MusicItemCollectionViewCell) -> Void in
+            cell.titleLabel.text = model
         }.addDisposableTo(disposeBag)
         
         collectionView.rx.delegate.setForwardToDelegate(self, retainDelegate: false)

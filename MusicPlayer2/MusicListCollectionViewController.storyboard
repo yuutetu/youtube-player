@@ -31,8 +31,8 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2Ty-0b-jJe" customClass="MusicItemCollectionViewCell" customModule="MusicPlayer2" customModuleProvider="target">
-                                        <rect key="frame" x="38" y="0.0" width="300" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ItemCell" id="2Ty-0b-jJe" customClass="MusicItemCollectionViewCell" customModule="MusicPlayer2" customModuleProvider="target">
+                                        <rect key="frame" x="37.5" y="0.0" width="300" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
@@ -46,6 +46,7 @@
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" red="1" green="0.36423072820000002" blue="0.34305008240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="dtj-6W-ZUl" secondAttribute="bottom" id="LWR-2H-dUw"/>
                                             <constraint firstAttribute="trailing" secondItem="dtj-6W-ZUl" secondAttribute="trailing" id="OQQ-W9-K0Y"/>

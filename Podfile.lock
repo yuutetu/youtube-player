@@ -3,17 +3,17 @@ PODS:
   - Haneke (1.0.2)
   - NSObject+Rx (2.0.0):
     - RxSwift
-  - Realm (2.1.0):
-    - Realm/Headers (= 2.1.0)
-  - Realm/Headers (2.1.0)
-  - RealmSwift (2.1.0):
-    - Realm (= 2.1.0)
-  - RxBlocking (3.0.1):
-    - RxSwift (~> 3.0)
-  - RxCocoa (3.0.1):
-    - RxSwift (~> 3.0)
-  - RxSwift (3.0.1)
-  - SnapKit (3.0.2)
+  - Realm (2.4.2):
+    - Realm/Headers (= 2.4.2)
+  - Realm/Headers (2.4.2)
+  - RealmSwift (2.4.2):
+    - Realm (= 2.4.2)
+  - RxBlocking (3.2.0):
+    - RxSwift (~> 3.1)
+  - RxCocoa (3.2.0):
+    - RxSwift (~> 3.1)
+  - RxSwift (3.2.0)
+  - SnapKit (3.1.2)
   - youtube-ios-player-helper (0.1.6)
 
 DEPENDENCIES:
@@ -31,12 +31,12 @@ SPEC CHECKSUMS:
   Decodable: 7c90acc68d357b71d0d6efc120faf9c53c644b7e
   Haneke: 01454a67322faa0dd9d81fc0f447885044e71521
   NSObject+Rx: 2a9cd801d9c847e6d2486cbad8d7701b67834e70
-  Realm: bc829ad0ef3d4eea70c34cfcc3b1704d18d50df1
-  RealmSwift: a4d4abbf0088c337cab5b738054395842e4b3052
-  RxBlocking: 5de082d09d1ab45b49173f309f1a97d6b50f34c4
-  RxCocoa: 15a52fc590dcc700cb4a690a633b5c5184ce3a78
-  RxSwift: af5680055c4ad04480189c52d28385b1029493a6
-  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
+  Realm: d27b758e12d62a3371879a065d4c40aa212c5a54
+  RealmSwift: 9556c0fe0f0cfecacfb755ae9e68ff379fc6bead
+  RxBlocking: ec8ed471ba77b4fb98a2d60f1f8419b0b46eaa23
+  RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
+  RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
+  SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
   youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
 PODFILE CHECKSUM: 304c0b707847ac540f82b6c16377ede86375400e

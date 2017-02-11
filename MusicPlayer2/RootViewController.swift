@@ -19,6 +19,7 @@ class RootViewController: UIViewController {
         let viewController = PlayerContainerViewController.viewController()
         viewController.inject(presenter: presenter)
         containerView.addSubview(viewController.view)
+        addChildViewController(viewController)
         viewController.view.snp.makeConstraints { (make) in
             make.edges.equalTo(0)
         }
