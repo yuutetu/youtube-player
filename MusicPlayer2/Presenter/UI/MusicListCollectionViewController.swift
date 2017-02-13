@@ -34,36 +34,12 @@ class MusicListCollectionViewController: UIViewController {
             if index == self.listView.numberOfItems(inSection: 0) - 2 {
                 self.dataSource?.next()
             }
-            cell.titleLabel.text = model.title
+            cell.setup(with: model)
         }.addDisposableTo(disposeBag)
         
         listView.rx.delegate.setForwardToDelegate(self, retainDelegate: false)
         
         dataSource?.load()
-        
-//        YoutubeAPIClient.default.request(YoutubeAPI.Movies.Popular).subscribe { event in
-//            switch event {
-//            case .next(let element):
-//                switch element.0 {
-//                case .success(let movies as APIMultipleResponse<Movie>):
-//                    self.values.value = movies.items.map { item in item.title ?? "<null>" }
-//                case .success:
-//                    // TODO: エラー処理
-//                    break
-//                case .failure(let error):
-//                    // TODO: エラー処理
-//                    print(error)
-//                    break
-//                }
-//            case .completed:
-//                // isLoading = false
-//                break
-//            case .error(let error):
-//                // TODO: エラー処理
-//                print(error)
-//                break
-//            }
-//        }.addDisposableTo(disposeBag)
     }
 }
 

@@ -7,7 +7,14 @@
 //
 
 import UIKit
+import Haneke
 
 class MusicItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var thumbnailImageView: UIImageView!
+    
+    func setup(with movie: Movie) {
+        titleLabel.text = movie.title
+        thumbnailImageView.hnk_setImage(from: movie.thumbnail?.url)
+    }
 }

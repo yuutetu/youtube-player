@@ -23,37 +23,59 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="k3J-UG-twa">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="v7N-jL-mP1">
-                                    <size key="itemSize" width="300" height="50"/>
+                                    <size key="itemSize" width="360" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ItemCell" id="2Ty-0b-jJe" customClass="MusicItemCollectionViewCell" customModule="MusicPlayer2" customModuleProvider="target">
-                                        <rect key="frame" x="37.5" y="0.0" width="300" height="50"/>
+                                        <rect key="frame" x="8" y="0.0" width="360" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtj-6W-ZUl">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtj-6W-ZUl">
+                                                    <rect key="frame" x="55" y="0.0" width="295" height="50"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="70S-A1-cRl" customClass="StyleableImageView" customModule="MusicPlayer2" customModuleProvider="target">
+                                                    <rect key="frame" x="5" y="5" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="82W-5L-BPw"/>
+                                                        <constraint firstAttribute="width" constant="40" id="dLC-zI-24L"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                            <integer key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderUIColor">
+                                                            <color key="value" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="1" green="0.36423072820000002" blue="0.34305008240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="70S-A1-cRl" secondAttribute="bottom" constant="5" id="I59-f9-GHH"/>
                                             <constraint firstAttribute="bottom" secondItem="dtj-6W-ZUl" secondAttribute="bottom" id="LWR-2H-dUw"/>
-                                            <constraint firstAttribute="trailing" secondItem="dtj-6W-ZUl" secondAttribute="trailing" id="OQQ-W9-K0Y"/>
-                                            <constraint firstItem="dtj-6W-ZUl" firstAttribute="leading" secondItem="2Ty-0b-jJe" secondAttribute="leading" id="P8x-o5-l6q"/>
+                                            <constraint firstAttribute="trailing" secondItem="dtj-6W-ZUl" secondAttribute="trailing" constant="10" id="OQQ-W9-K0Y"/>
+                                            <constraint firstItem="dtj-6W-ZUl" firstAttribute="leading" secondItem="70S-A1-cRl" secondAttribute="trailing" constant="10" id="Ry3-2Z-5XM"/>
+                                            <constraint firstItem="70S-A1-cRl" firstAttribute="leading" secondItem="2Ty-0b-jJe" secondAttribute="leading" constant="5" id="SaZ-e2-MFC"/>
+                                            <constraint firstItem="70S-A1-cRl" firstAttribute="top" secondItem="2Ty-0b-jJe" secondAttribute="top" constant="5" id="ThB-Yj-7IG"/>
                                             <constraint firstItem="dtj-6W-ZUl" firstAttribute="top" secondItem="2Ty-0b-jJe" secondAttribute="top" id="dab-3j-OWq"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="thumbnailImageView" destination="70S-A1-cRl" id="ohx-LZ-WvZ"/>
                                             <outlet property="titleLabel" destination="dtj-6W-ZUl" id="7gb-WF-Bed"/>
                                         </connections>
                                     </collectionViewCell>
