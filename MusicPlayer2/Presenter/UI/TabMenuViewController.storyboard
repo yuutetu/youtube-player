@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0CT-l9-7gD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Menu View Controller-->
+        <scene sceneID="tFu-eh-ruO">
+            <objects>
+                <viewController id="0CT-l9-7gD" customClass="TabMenuViewController" customModule="MusicPlayer2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cbm-oB-8aA"/>
+                        <viewControllerLayoutGuide type="bottom" id="r8N-wz-cUR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cPA-em-jXk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8r9-N6-xxW">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ur-GN-szl">
+                                        <rect key="frame" x="0.0" y="43" width="375" height="1"/>
+                                        <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="iMM-cw-Di1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="7eA-TG-CQy"/>
+                                    <constraint firstItem="7ur-GN-szl" firstAttribute="leading" secondItem="8r9-N6-xxW" secondAttribute="leading" id="AzW-tu-NfX"/>
+                                    <constraint firstAttribute="trailing" secondItem="7ur-GN-szl" secondAttribute="trailing" id="fml-u1-H73"/>
+                                    <constraint firstAttribute="bottom" secondItem="7ur-GN-szl" secondAttribute="bottom" id="mba-OK-W5f"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WmY-3q-yLF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qGL-mi-enN">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qGL-mi-enN" firstAttribute="leading" secondItem="cPA-em-jXk" secondAttribute="leading" id="8db-J4-HqC"/>
+                            <constraint firstItem="r8N-wz-cUR" firstAttribute="top" secondItem="qGL-mi-enN" secondAttribute="bottom" id="8ib-I6-Xgb"/>
+                            <constraint firstAttribute="trailing" secondItem="WmY-3q-yLF" secondAttribute="trailing" id="9IO-IM-yfO"/>
+                            <constraint firstItem="8r9-N6-xxW" firstAttribute="top" secondItem="Cbm-oB-8aA" secondAttribute="bottom" id="Q6i-dM-SY0"/>
+                            <constraint firstItem="WmY-3q-yLF" firstAttribute="top" secondItem="cPA-em-jXk" secondAttribute="top" id="RUZ-W3-c6X"/>
+                            <constraint firstAttribute="trailing" secondItem="qGL-mi-enN" secondAttribute="trailing" id="Uc7-s0-Xbu"/>
+                            <constraint firstItem="8r9-N6-xxW" firstAttribute="top" secondItem="WmY-3q-yLF" secondAttribute="bottom" id="Xdg-cB-k30"/>
+                            <constraint firstItem="8r9-N6-xxW" firstAttribute="leading" secondItem="cPA-em-jXk" secondAttribute="leading" id="YnU-pj-B9E"/>
+                            <constraint firstItem="qGL-mi-enN" firstAttribute="top" secondItem="8r9-N6-xxW" secondAttribute="bottom" id="f3Y-pt-Y9a"/>
+                            <constraint firstItem="WmY-3q-yLF" firstAttribute="leading" secondItem="cPA-em-jXk" secondAttribute="leading" id="rL7-uq-nRX"/>
+                            <constraint firstAttribute="trailing" secondItem="8r9-N6-xxW" secondAttribute="trailing" id="x99-Cf-FqC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="qGL-mi-enN" id="hHq-Cv-fzZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D7z-XW-7Fb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102" y="134"/>
+        </scene>
+    </scenes>
+</document>

@@ -40,7 +40,7 @@ class PlayerContainerViewController: UIViewController {
             .map{ !$0 }.drive(playerView.rx.isHidden)
             .addDisposableTo(disposeBag)
         
-        let viewController = MusicListCollectionViewController.viewController()
+        let viewController = TabMenuViewController.viewController()
         addChildViewController(viewController)
         containerView.addSubview(viewController.view)
         viewController.view.snp.makeConstraints { (make) in
