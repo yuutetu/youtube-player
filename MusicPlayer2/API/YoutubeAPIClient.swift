@@ -21,7 +21,7 @@ class YoutubeAPIClient: NSObject {
             if let pageToken = pageToken {
                 url = url + "&pageToken=\(pageToken)"
             }
-            return URL(string: url)!
+            return URL(string: url.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlFragmentAllowed)!)!
         }()
         let request = URLRequest(url: url)
         let configuration = URLSessionConfiguration.default

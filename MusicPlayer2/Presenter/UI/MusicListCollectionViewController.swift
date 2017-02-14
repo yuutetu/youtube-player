@@ -23,7 +23,7 @@ class MusicListCollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dataSource = APIDataSource<Movie>(request: YoutubeAPI.Movies.Search(query: "東方自然癒 bgm"))
+        dataSource = APIDataSource<Movie>(request: YoutubeAPI.Movies.Search(query: "東方自然癒"))
         
         dataSource?.models.asDriver().drive(listView.rx.items(cellIdentifier: "ItemCell", cellType: MusicItemCollectionViewCell.self)) { [weak self]
             (index: Int, model: Movie, cell: MusicItemCollectionViewCell) -> Void in
