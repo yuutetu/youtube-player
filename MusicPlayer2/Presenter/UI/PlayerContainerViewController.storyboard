@@ -27,9 +27,23 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LR9-g2-OP1">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <subviews>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YyU-9H-vog">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="JTF-xR-eQw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                        <blurEffect style="dark"/>
+                                    </visualEffectView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="YyU-9H-vog" firstAttribute="top" secondItem="LR9-g2-OP1" secondAttribute="top" id="81A-0T-axg"/>
                                     <constraint firstAttribute="height" constant="50" id="GIH-tB-2yC"/>
+                                    <constraint firstAttribute="bottom" secondItem="YyU-9H-vog" secondAttribute="bottom" id="Gbs-CE-qRA"/>
+                                    <constraint firstAttribute="trailing" secondItem="YyU-9H-vog" secondAttribute="trailing" id="Nir-8G-aon"/>
+                                    <constraint firstItem="YyU-9H-vog" firstAttribute="leading" secondItem="LR9-g2-OP1" secondAttribute="leading" id="phi-WW-4I9"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PDz-Ng-c0c">

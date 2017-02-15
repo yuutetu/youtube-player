@@ -27,7 +27,6 @@ class YoutubeAPIClient: NSObject {
         let configuration = URLSessionConfiguration.default
         let session = URLSession(configuration: configuration)
         return session.rx.response(request: request).map({ (response: HTTPURLResponse, data: Data) -> (Result<APISerializationValue>, HTTPURLResponse) in
-            print(String(data: data, encoding: .utf8) ?? "<error>")
             return (youtubeAPIRequest.deserializer.deserialize(data: data), response)
         })
     }
