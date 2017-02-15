@@ -72,6 +72,7 @@
 		201661721E51591000E6893D /* MovieDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
 		201661751E515F6F00E6893D /* URL+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Decodable.swift"; sourceTree = "<group>"; };
 		203324201E5192BC0005CDEE /* APIDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIDataSource.swift; sourceTree = "<group>"; };
+		20A66E111E5416B400F6C80D /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		20C80B151E0C30AB00961C25 /* MusicPlayer2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C80B181E0C30AB00961C25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20C80B1A1E0C30AB00961C25 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +237,7 @@
 				20C80B211E0C30AB00961C25 /* LaunchScreen.storyboard */,
 				20C80B241E0C30AB00961C25 /* Info.plist */,
 				20F883C01E5310400074DE1F /* sample.html */,
+				20A66E111E5416B400F6C80D /* MyPlayground.playground */,
 			);
 			path = MusicPlayer2;
 			sourceTree = "<group>";
