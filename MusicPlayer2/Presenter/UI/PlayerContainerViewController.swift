@@ -133,4 +133,20 @@ class PlayerContainerViewController: UIViewController {
             height: frame.height
         )
     }
+    
+    @IBAction func handleStart() {
+        MusicPlayerManager.default.play()
+    }
+    
+    @IBAction func handleStop() {
+        MusicPlayerManager.default.stop()
+    }
+    
+    @IBAction func handleNext() {
+        
+    }
+    
+    @IBAction func handlePrevious() {
+        
+    }
 }

@@ -49,6 +49,9 @@
                                                                         </imageView>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIh-FO-qj5">
                                                                             <rect key="frame" x="0.0" y="0.0" width="94" height="40"/>
+                                                                            <connections>
+                                                                                <action selector="handlePrevious" destination="eFA-Zy-5Hk" eventType="touchUpInside" id="v2r-6d-40t"/>
+                                                                            </connections>
                                                                         </button>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -72,6 +75,9 @@
                                                                         </imageView>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaa-tY-xpH">
                                                                             <rect key="frame" x="0.0" y="0.0" width="93.5" height="40"/>
+                                                                            <connections>
+                                                                                <action selector="handleStart" destination="eFA-Zy-5Hk" eventType="touchUpInside" id="khe-u1-5tE"/>
+                                                                            </connections>
                                                                         </button>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -95,6 +101,9 @@
                                                                         </imageView>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rle-Q9-Ciw">
                                                                             <rect key="frame" x="0.0" y="0.0" width="94" height="40"/>
+                                                                            <connections>
+                                                                                <action selector="handleStop" destination="eFA-Zy-5Hk" eventType="touchUpInside" id="Fqq-LF-EXZ"/>
+                                                                            </connections>
                                                                         </button>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -118,6 +127,9 @@
                                                                         </imageView>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekw-oD-mwI">
                                                                             <rect key="frame" x="0.0" y="0.0" width="93.5" height="40"/>
+                                                                            <connections>
+                                                                                <action selector="handleNext" destination="eFA-Zy-5Hk" eventType="touchUpInside" id="bql-cB-ZbF"/>
+                                                                            </connections>
                                                                         </button>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
