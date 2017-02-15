@@ -37,6 +37,7 @@
 		20F883BC1E51C6D20074DE1F /* TabMenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20F883BB1E51C6D20074DE1F /* TabMenuViewController.storyboard */; };
 		20F883BF1E52F7C10074DE1F /* MusicPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F883BE1E52F7C10074DE1F /* MusicPlayerManager.swift */; };
 		20F883C11E5310400074DE1F /* sample.html in Resources */ = {isa = PBXBuildFile; fileRef = 20F883C01E5310400074DE1F /* sample.html */; };
+		20F883C31E53D84F0074DE1F /* youtube_ios_player_helper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F883C21E53D84F0074DE1F /* youtube_ios_player_helper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		20F883BB1E51C6D20074DE1F /* TabMenuViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabMenuViewController.storyboard; sourceTree = "<group>"; };
 		20F883BE1E52F7C10074DE1F /* MusicPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerManager.swift; sourceTree = "<group>"; };
 		20F883C01E5310400074DE1F /* sample.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sample.html; sourceTree = "<group>"; };
+		20F883C21E53D84F0074DE1F /* youtube_ios_player_helper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = youtube_ios_player_helper.framework; path = "../../../Library/Developer/Xcode/DerivedData/MusicPlayer2-dcqezoxzczrpwidtjmtpfxhulbdh/Build/Products/Debug-iphonesimulator/youtube-ios-player-helper/youtube_ios_player_helper.framework"; sourceTree = "<group>"; };
 		319608CD163A93E2AC26CF0D /* Pods-MusicPlayer2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicPlayer2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicPlayer2/Pods-MusicPlayer2.debug.xcconfig"; sourceTree = "<group>"; };
 		ACC42F8500E3C6860C41996E /* Pods_MusicPlayer2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicPlayer2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -102,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20F883C31E53D84F0074DE1F /* youtube_ios_player_helper.framework in Frameworks */,
 				03D2254C31389DACFED61DC8 /* Pods_MusicPlayer2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +302,7 @@
 		F69B0D260D81620D314B3E27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				20F883C21E53D84F0074DE1F /* youtube_ios_player_helper.framework */,
 				ACC42F8500E3C6860C41996E /* Pods_MusicPlayer2.framework */,
 			);
 			name = Frameworks;

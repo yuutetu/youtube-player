@@ -46,7 +46,11 @@ class MusicListCollectionViewController: UIViewController {
 extension MusicListCollectionViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // TODO: presenterに伝える
-        MusicPlayerManager.default.prepareForPlay(dataSource: dataSource!, index: indexPath.row)
+        guard let movie = dataSource?[indexPath.row] else {
+            return
+        }
+        
+        MusicPlayerManager.default.prepareToPlayWithYoutubeVideo(video: movie)
         
     }
 }

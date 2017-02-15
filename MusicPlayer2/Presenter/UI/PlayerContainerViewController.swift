@@ -37,7 +37,7 @@ class PlayerContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        MusicPlayerManager.default.musicView = movieView
+        setupPlayerView()
         
         presenter?.displayingPlayerView.asDriver()
             .map{ !$0 }.drive(playerView.rx.isHidden)
@@ -52,4 +52,12 @@ class PlayerContainerViewController: UIViewController {
     }
 
     // TODO: Containerの設定
+    
+    func setupPlayerView() {
+        let playerView = MusicPlayerManager.default.playerView
+        movieView.addSubview(playerView)
+        playerView.snp.makeConstraints { make in
+            make.edges.equalTo(0)
+        }
+    }
 }
