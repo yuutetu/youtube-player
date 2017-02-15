@@ -46,6 +46,8 @@ class MusicListCollectionViewController: UIViewController {
 extension MusicListCollectionViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // TODO: presenterに伝える
+        MusicPlayerManager.default.prepareForPlay(dataSource: dataSource!, index: indexPath.row)
+        
     }
 }
 

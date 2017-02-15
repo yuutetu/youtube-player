@@ -13,7 +13,7 @@ extension YoutubeAPI {
     struct Movie: YoutubeAPIRequest {
         let id: String
         var requestURL: String {
-            return "https://www.googleapis.com/youtube/v3/videos?id=\(id)&part=id,contentDetails"
+            return "https://www.googleapis.com/youtube/v3/videos?id=\(id)&part=id,contentDetails,player"
         }
         var deserializer: APIDeserializer {
             return ModelAPIDeserializer<APISingleResponse<MusicPlayer2.MovieDetail>>()

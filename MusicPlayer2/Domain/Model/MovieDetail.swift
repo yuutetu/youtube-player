@@ -10,12 +10,14 @@ import Decodable
 
 struct MovieDetail {
     let duration: String
+    let embedHtml: String
     var totalPlayTime: Int64? {
         return self.parseDuration(self.duration)
     }
     
-    init(duration: String) {
+    init(duration: String, embedHtml: String) {
         self.duration = duration
+        self.embedHtml = embedHtml
     }
     
     private func parseDuration(_ duration: String) -> Int64? {
@@ -35,8 +37,10 @@ struct MovieDetail {
 
 extension MovieDetail: APIModel {
     static func decode(_ json: Any) throws -> MovieDetail {
+        let html: String = try json => "player" => "embedHtml"
         return try MovieDetail(
-            duration: json => "contentDetails" => "duration"
+            duration: json => "contentDetails" => "duration",
+            embedHtml: html.replacingOccurrences(of: "//www.youtube.com", with: "https://www.youtube.com")
         )
     }
 }

@@ -35,6 +35,8 @@
 		20F883B81E51BC030074DE1F /* StyleableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F883B71E51BC030074DE1F /* StyleableView.swift */; };
 		20F883BA1E51C4420074DE1F /* TabMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F883B91E51C4420074DE1F /* TabMenuViewController.swift */; };
 		20F883BC1E51C6D20074DE1F /* TabMenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20F883BB1E51C6D20074DE1F /* TabMenuViewController.storyboard */; };
+		20F883BF1E52F7C10074DE1F /* MusicPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F883BE1E52F7C10074DE1F /* MusicPlayerManager.swift */; };
+		20F883C11E5310400074DE1F /* sample.html in Resources */ = {isa = PBXBuildFile; fileRef = 20F883C01E5310400074DE1F /* sample.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		20F883B71E51BC030074DE1F /* StyleableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleableView.swift; sourceTree = "<group>"; };
 		20F883B91E51C4420074DE1F /* TabMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabMenuViewController.swift; sourceTree = "<group>"; };
 		20F883BB1E51C6D20074DE1F /* TabMenuViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabMenuViewController.storyboard; sourceTree = "<group>"; };
+		20F883BE1E52F7C10074DE1F /* MusicPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerManager.swift; sourceTree = "<group>"; };
+		20F883C01E5310400074DE1F /* sample.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sample.html; sourceTree = "<group>"; };
 		319608CD163A93E2AC26CF0D /* Pods-MusicPlayer2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicPlayer2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicPlayer2/Pods-MusicPlayer2.debug.xcconfig"; sourceTree = "<group>"; };
 		ACC42F8500E3C6860C41996E /* Pods_MusicPlayer2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicPlayer2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -131,6 +135,7 @@
 		201661561E4F607000E6893D /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				20F883BD1E52F7A00074DE1F /* Manager */,
 				2033241F1E5192300005CDEE /* DataSource */,
 				201661581E4F614300E6893D /* Model */,
 			);
@@ -227,6 +232,7 @@
 				20C80B1F1E0C30AB00961C25 /* Assets.xcassets */,
 				20C80B211E0C30AB00961C25 /* LaunchScreen.storyboard */,
 				20C80B241E0C30AB00961C25 /* Info.plist */,
+				20F883C01E5310400074DE1F /* sample.html */,
 			);
 			path = MusicPlayer2;
 			sourceTree = "<group>";
@@ -280,6 +286,14 @@
 				20F883B71E51BC030074DE1F /* StyleableView.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		20F883BD1E52F7A00074DE1F /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				20F883BE1E52F7C10074DE1F /* MusicPlayerManager.swift */,
+			);
+			name = Manager;
 			sourceTree = "<group>";
 		};
 		F69B0D260D81620D314B3E27 /* Frameworks */ = {
@@ -404,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20C80B231E0C30AB00961C25 /* LaunchScreen.storyboard in Resources */,
+				20F883C11E5310400074DE1F /* sample.html in Resources */,
 				20C80B551E0ED9B900961C25 /* MusicListCollectionViewController.storyboard in Resources */,
 				20F883BC1E51C6D20074DE1F /* TabMenuViewController.storyboard in Resources */,
 				20C80B531E0ED98500961C25 /* PlayerContainerViewController.storyboard in Resources */,
@@ -489,6 +504,7 @@
 				201661711E51356600E6893D /* APIMultipleResponse.swift in Sources */,
 				20C80B4D1E0EB7CC00961C25 /* MusicListCollectionViewController.swift in Sources */,
 				203324211E5192BC0005CDEE /* APIDataSource.swift in Sources */,
+				20F883BF1E52F7C10074DE1F /* MusicPlayerManager.swift in Sources */,
 				201661681E51345B00E6893D /* APIModel.swift in Sources */,
 				201661731E51591000E6893D /* MovieDetail.swift in Sources */,
 				201661661E5131D200E6893D /* APISerializationValue.swift in Sources */,

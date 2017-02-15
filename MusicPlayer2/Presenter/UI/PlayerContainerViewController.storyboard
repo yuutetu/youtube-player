@@ -21,6 +21,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PDz-Ng-c0c">
+                                <rect key="frame" x="0.0" y="20" width="375" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="kdg-RQ-YRW"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ocD-8S-yKi">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -36,17 +43,21 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="LR9-g2-OP1" secondAttribute="bottom" id="BCp-ma-5gu"/>
+                            <constraint firstAttribute="trailing" secondItem="PDz-Ng-c0c" secondAttribute="trailing" id="LT5-F4-6o2"/>
                             <constraint firstItem="LR9-g2-OP1" firstAttribute="leading" secondItem="PJx-v1-Uot" secondAttribute="leading" id="Nwg-UM-arU"/>
+                            <constraint firstItem="PDz-Ng-c0c" firstAttribute="leading" secondItem="PJx-v1-Uot" secondAttribute="leading" id="enq-82-WVD"/>
                             <constraint firstAttribute="trailing" secondItem="ocD-8S-yKi" secondAttribute="trailing" id="g5W-fa-zff"/>
                             <constraint firstAttribute="trailing" secondItem="LR9-g2-OP1" secondAttribute="trailing" id="nQe-8y-bmL"/>
                             <constraint firstItem="ocD-8S-yKi" firstAttribute="leading" secondItem="PJx-v1-Uot" secondAttribute="leading" id="olN-Du-lcS"/>
                             <constraint firstItem="ze5-NF-vTC" firstAttribute="top" secondItem="ocD-8S-yKi" secondAttribute="bottom" id="p1E-aQ-bxh"/>
                             <constraint firstItem="ocD-8S-yKi" firstAttribute="top" secondItem="PJx-v1-Uot" secondAttribute="top" id="pau-lt-Zsu"/>
+                            <constraint firstItem="PDz-Ng-c0c" firstAttribute="top" secondItem="Wce-tH-4At" secondAttribute="bottom" id="x3g-i2-gN7"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="containerView" destination="ocD-8S-yKi" id="GSI-uM-eHs"/>
-                        <outlet property="playerView" destination="LR9-g2-OP1" id="p8E-ay-6GA"/>
+                        <outlet property="movieView" destination="PDz-Ng-c0c" id="8af-j1-pO3"/>
+                        <outlet property="playerView" destination="LR9-g2-OP1" id="GOY-yR-g2D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mCy-Mb-hpG" userLabel="First Responder" sceneMemberID="firstResponder"/>

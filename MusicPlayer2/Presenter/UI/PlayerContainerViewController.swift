@@ -20,6 +20,7 @@ class PlayerPresenter {
 class PlayerContainerViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var playerView: UIView!
+    @IBOutlet weak var movieView: UIView!
     
     var presenter: PlayerPresenter?
     var isPlaying: Bool = false
@@ -35,6 +36,8 @@ class PlayerContainerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        MusicPlayerManager.default.musicView = movieView
         
         presenter?.displayingPlayerView.asDriver()
             .map{ !$0 }.drive(playerView.rx.isHidden)
