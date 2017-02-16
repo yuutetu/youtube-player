@@ -13,8 +13,10 @@ import youtube_ios_player_helper
 import MediaPlayer
 
 protocol Player: class {
-    func prepareToPlay(dataSource: APIDataSource<Movie>, index: Int)
+    func play(dataSource: APIDataSource<Movie>, index: Int)
     func play()
+    func next()
+    func previous()
     func pause()
     func stop()
 }
@@ -27,9 +29,10 @@ class MusicPlayerManager : NSObject, YTPlayerViewDelegate {
     func setup() {
         // 初期化実行用
         setupBackgroundPlay()
+        setupControlCenter()
     }
     
-    func setupBackgroundPlay() {
+    private func setupBackgroundPlay() {
         let session = AVAudioSession.sharedInstance()
         do {
             try session.setCategory(AVAudioSessionCategoryPlayAndRecord )
@@ -44,12 +47,37 @@ class MusicPlayerManager : NSObject, YTPlayerViewDelegate {
         }
     }
     
-    func prepareToPlay(dataSource: APIDataSource<Movie>, index: Int) {
-        player?.prepareToPlay(dataSource: dataSource, index: index)
+    private func setupControlCenter() {
+        let center = MPRemoteCommandCenter.shared()
+        let nextCommand = center.nextTrackCommand
+        nextCommand.isEnabled = true
+        nextCommand.addTarget { [weak self] (event) -> MPRemoteCommandHandlerStatus in
+            self?.next()
+            return .success
+        }
+        let previousCommand = center.previousTrackCommand
+        previousCommand.isEnabled = true
+        previousCommand.addTarget { [weak self] (event) -> MPRemoteCommandHandlerStatus in
+            self?.previous()
+            return .success
+        }
+        
+    }
+    
+    func play(dataSource: APIDataSource<Movie>, index: Int) {
+        player?.play(dataSource: dataSource, index: index)
     }
     
     func play() {
         player?.play()
+    }
+    
+    func next() {
+        player?.next()
+    }
+    
+    func previous() {
+        player?.previous()
     }
     
     func pause() {

@@ -130,7 +130,6 @@ class PlayerContainerViewController: UIViewController {
         
         let frame = titleLabel.frame
         let x = titleLabel.frame.minX - 1
-        print(x < -frame.width ? frame.width : x)
         titleLabel.frame = CGRect(
             x: x < -frame.width ? titleView.frame.width : x,
             y: frame.minY,
@@ -140,20 +139,18 @@ class PlayerContainerViewController: UIViewController {
     }
     
     @IBAction func handleStart() {
-//        MusicPlayerManager.default.play()
-        autoPlayerPresenter?.play()
+        MusicPlayerManager.default.play()
     }
     
     @IBAction func handleStop() {
-//        MusicPlayerManager.default.stop()
-        autoPlayerPresenter?.stop()
+        MusicPlayerManager.default.stop()
     }
     
     @IBAction func handleNext() {
-        
+        MusicPlayerManager.default.next()
     }
     
     @IBAction func handlePrevious() {
-        
+        MusicPlayerManager.default.previous()
     }
 }

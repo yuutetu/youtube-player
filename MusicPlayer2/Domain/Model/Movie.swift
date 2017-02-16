@@ -9,7 +9,7 @@
 import Decodable
 
 struct Movie {
-    let id: String?
+    let id: String
     let title: String?
     let thumbnail: Thumbnail?
 }
@@ -17,7 +17,7 @@ struct Movie {
 extension Movie: APIModel {
     static func decode(_ json: Any) throws -> Movie {
         return try Movie(
-            id: json =>? "id" =>? "videoId",
+            id: json => "id" => "videoId",
             title: json =>? "snippet" =>? "title",
             thumbnail: json =>? "snippet" =>? "thumbnails"
         )

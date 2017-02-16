@@ -31,7 +31,7 @@ class MusicListCollectionViewController: UIViewController {
                 return
             }
             
-            if index == self.listView.numberOfItems(inSection: 0) - 2 {
+            if index == self.listView.numberOfItems(inSection: 0) - 1 {
                 self.dataSource?.next()
             }
             cell.setup(with: model)
@@ -49,7 +49,7 @@ extension MusicListCollectionViewController: UICollectionViewDelegate {
             return
         }
         
-        MusicPlayerManager.default.prepareToPlay(dataSource: dataSource, index: indexPath.row)
+        MusicPlayerManager.default.play(dataSource: dataSource, index: indexPath.row)
     }
 }
 

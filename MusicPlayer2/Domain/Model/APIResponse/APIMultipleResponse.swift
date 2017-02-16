@@ -16,7 +16,7 @@ struct APIMultipleResponse<T: APIModel> {
 extension APIMultipleResponse: APIModel {
     static func decode(_ json: Any) throws -> APIMultipleResponse<T> {
         return try APIMultipleResponse(
-            items:          json => "items",
+            items: [T].decode(json => "items", ignoreInvalidObjectsAndLogErrors: true),
             nextPageToken:  json => "nextPageToken"
         )
     }

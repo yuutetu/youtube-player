@@ -49,20 +49,21 @@ extension PlayerView {
         }
         
         private func setupAutoPlay() {
-            rx_event.asDriver(onErrorJustReturn: .error).drive(onNext: { event in
-                switch event {
-                case .loadCompleted:
-                    self.play()
-                default:
-                    break
-                }
-            }).addDisposableTo(disposeBag)
+//            rx_event.asDriver(onErrorJustReturn: .error).drive(onNext: { event in
+//                switch event {
+//                case .loadCompleted:
+//                    self.play()
+//                default:
+//                    break
+//                }
+//            }).addDisposableTo(disposeBag)
         }
         
         func prepareToPlayWithYoutubeVideo(video: Movie) {
-            guard let videoId = video.id else {
-                return
-            }
+            let videoId = video.id
+//            guard let videoId = video.id else {
+//                return
+//            }
             
             print("[MusicPlayer]: Prepare to play(videoId: \(videoId))")
             // 再生準備処理
