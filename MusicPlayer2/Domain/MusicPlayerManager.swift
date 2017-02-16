@@ -12,6 +12,11 @@ import RxSwift
 import youtube_ios_player_helper
 import MediaPlayer
 
+enum PlayerMode {
+    case intro
+    case full
+}
+
 protocol Player: class {
     func play(dataSource: APIDataSource<Movie>, index: Int)
     func play()
@@ -19,6 +24,7 @@ protocol Player: class {
     func previous()
     func pause()
     func stop()
+    func set(playerMode: PlayerMode)
 }
 
 class MusicPlayerManager : NSObject, YTPlayerViewDelegate {
@@ -86,5 +92,9 @@ class MusicPlayerManager : NSObject, YTPlayerViewDelegate {
     
     func stop() {
         player?.stop()
+    }
+    
+    func set(playerMode: PlayerMode) {
+        player?.set(playerMode: playerMode)
     }
 }

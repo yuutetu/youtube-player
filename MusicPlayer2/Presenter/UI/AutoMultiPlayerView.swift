@@ -26,7 +26,7 @@ extension AutoMultiPlayerView {
         var movieIDForPlayerView: [PlayerView: String] = [:]
         var currentDataSource: APIDataSource<Movie>?
         var currentIndex: Int?
-        
+        var currentPlayerMode: PlayerMode = .intro
         
         func loadContent() {
 //            let playerPresenter = PlayerView.Presenter()
@@ -99,8 +99,7 @@ extension AutoMultiPlayerView {
                     
                     self.playerViewForMovieID[currentMovieID]?.presenter?.play()
                 case .updatedPlayTime(let playTime):
-//                    break
-                    if playTime > 15 {
+                    if self.currentPlayerMode == .intro && playTime > 15 {
                         guard
                             let index = self.currentIndex,
                             let currentMovieID = self.currentDataSource?[index].id,
@@ -113,14 +112,13 @@ extension AutoMultiPlayerView {
                 case .didChangeToState(let state):
                     switch state {
                     case .ended:
-//                        guard let index = self.currentIndex,
-//                            let currentMovieID = self.currentDataSource?[index].id,
-//                            movieID == currentMovieID else {
-//                                break
-//                        }
-//                        
-//                        self.next()
-                        break
+                        guard let index = self.currentIndex,
+                            let currentMovieID = self.currentDataSource?[index].id,
+                            movieID == currentMovieID else {
+                                break
+                        }
+                        
+                        self.next()
                     default:
                         break
                     }
@@ -184,6 +182,10 @@ extension AutoMultiPlayerView {
             
             print("[AutoMultiPlayerView]: Stop")
             playerView.presenter?.stop()
+        }
+        
+        func set(playerMode: PlayerMode) {
+            currentPlayerMode = playerMode
         }
     }
 }
