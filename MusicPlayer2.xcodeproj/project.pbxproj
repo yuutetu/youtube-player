@@ -22,6 +22,7 @@
 		201661761E515F6F00E6893D /* URL+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201661751E515F6F00E6893D /* URL+Decodable.swift */; };
 		203324211E5192BC0005CDEE /* APIDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203324201E5192BC0005CDEE /* APIDataSource.swift */; };
 		20A66E151E546C8A00F6C80D /* AutoMultiPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A66E141E546C8A00F6C80D /* AutoMultiPlayerView.swift */; };
+		20A66E171E553CFD00F6C80D /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A66E161E553CFD00F6C80D /* PlayerView.swift */; };
 		20C80B191E0C30AB00961C25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C80B181E0C30AB00961C25 /* AppDelegate.swift */; };
 		20C80B1B1E0C30AB00961C25 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C80B1A1E0C30AB00961C25 /* RootViewController.swift */; };
 		20C80B201E0C30AB00961C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C80B1F1E0C30AB00961C25 /* Assets.xcassets */; };
@@ -75,6 +76,7 @@
 		203324201E5192BC0005CDEE /* APIDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIDataSource.swift; sourceTree = "<group>"; };
 		20A66E111E5416B400F6C80D /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		20A66E141E546C8A00F6C80D /* AutoMultiPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMultiPlayerView.swift; sourceTree = "<group>"; };
+		20A66E161E553CFD00F6C80D /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		20C80B151E0C30AB00961C25 /* MusicPlayer2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C80B181E0C30AB00961C25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20C80B1A1E0C30AB00961C25 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 				20F883B91E51C4420074DE1F /* TabMenuViewController.swift */,
 				20F883BB1E51C6D20074DE1F /* TabMenuViewController.storyboard */,
 				20A66E141E546C8A00F6C80D /* AutoMultiPlayerView.swift */,
+				20A66E161E553CFD00F6C80D /* PlayerView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				20C80B1B1E0C30AB00961C25 /* RootViewController.swift in Sources */,
 				20C80B191E0C30AB00961C25 /* AppDelegate.swift in Sources */,
 				2016615A1E4F616F00E6893D /* Movie.swift in Sources */,
+				20A66E171E553CFD00F6C80D /* PlayerView.swift in Sources */,
 				2016616F1E51355800E6893D /* APISingleResponse.swift in Sources */,
 				2016616A1E5134DE00E6893D /* YoutubeAPI.swift in Sources */,
 				201661711E51356600E6893D /* APIMultipleResponse.swift in Sources */,

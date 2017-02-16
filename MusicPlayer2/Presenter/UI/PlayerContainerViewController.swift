@@ -71,6 +71,7 @@ class PlayerContainerViewController: UIViewController {
         playerView.snp.makeConstraints { make in
             make.edges.equalTo(0)
         }
+        MusicPlayerManager.default.player = playerPresenter
         autoPlayerPresenter = playerPresenter
         
         let previousImage = #imageLiteral(resourceName: "icon-previous")

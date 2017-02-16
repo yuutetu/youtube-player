@@ -10,36 +10,40 @@ import UIKit
 import RxSwift
 
 extension AutoMultiPlayerView {
-    class Presenter {
+    class Presenter: Player {
         enum Events {
             case error
             case add(view: UIView)
         }
         
         let rx_event = PublishSubject<Events>()
+        var playerPresenter: PlayerView.Presenter?
         
         func loadContent() {
-            let playerView = MusicPlayerManager.default.playerView
+            let playerPresenter = PlayerView.Presenter()
+            let playerView = PlayerView()
+            playerView.presenter = playerPresenter
             rx_event.onNext(.add(view: playerView))
+            self.playerPresenter = playerPresenter
         }
         
         func prepareToPlay(dataSource: APIDataSource<Movie>, index: Int) {
-            MusicPlayerManager.default.prepareToPlayWithYoutubeVideo(video: dataSource[index])
+            playerPresenter?.prepareToPlayWithYoutubeVideo(video: dataSource[index])
         }
         
         func play() {
             print("[AutoMultiPlayerView]: Play")
-            MusicPlayerManager.default.play()
+            playerPresenter?.play()
         }
         
         func pause() {
             print("[AutoMultiPlayerView]: Pause")
-            MusicPlayerManager.default.pause()
+            playerPresenter?.pause()
         }
         
         func stop() {
             print("[AutoMultiPlayerView]: Stop")
-            MusicPlayerManager.default.stop()
+            playerPresenter?.stop()
         }
     }
 }
