@@ -34,6 +34,7 @@ class PlayerContainerViewController: UIViewController {
     var presenter: PlayerPresenter?
     var isPlaying: Bool = false
     let disposeBag = DisposeBag()
+    var autoPlayerPresenter: AutoMultiPlayerView.Presenter?
     
     static func viewController() -> PlayerContainerViewController {
         return UIStoryboard(name: "PlayerContainerViewController", bundle: nil).instantiateInitialViewController() as! PlayerContainerViewController
@@ -63,11 +64,14 @@ class PlayerContainerViewController: UIViewController {
     // TODO: Containerの設定
     
     func setupPlayerView() {
-        let playerView = MusicPlayerManager.default.playerView
+        let playerPresenter = AutoMultiPlayerView.Presenter()
+        let playerView = AutoMultiPlayerView(frame: CGRect.zero)
+        playerView.presenter = playerPresenter
         movieView.addSubview(playerView)
         playerView.snp.makeConstraints { make in
             make.edges.equalTo(0)
         }
+        autoPlayerPresenter = playerPresenter
         
         let previousImage = #imageLiteral(resourceName: "icon-previous")
         previousImage.withRenderingMode(.alwaysTemplate)
@@ -135,11 +139,13 @@ class PlayerContainerViewController: UIViewController {
     }
     
     @IBAction func handleStart() {
-        MusicPlayerManager.default.play()
+//        MusicPlayerManager.default.play()
+        autoPlayerPresenter?.play()
     }
     
     @IBAction func handleStop() {
-        MusicPlayerManager.default.stop()
+//        MusicPlayerManager.default.stop()
+        autoPlayerPresenter?.stop()
     }
     
     @IBAction func handleNext() {
