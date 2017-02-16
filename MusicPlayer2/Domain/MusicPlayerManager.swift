@@ -18,6 +18,7 @@ enum PlayerMode {
 }
 
 protocol Player: class {
+    var currentPlayerMode: PlayerMode { get }
     func play(dataSource: APIDataSource<Movie>, index: Int)
     func play()
     func next()
@@ -94,7 +95,21 @@ class MusicPlayerManager : NSObject, YTPlayerViewDelegate {
         player?.stop()
     }
     
-    func set(playerMode: PlayerMode) {
-        player?.set(playerMode: playerMode)
+    func set(playerMode: PlayerMode, force: Bool = false) {
+        guard !force else {
+            player?.set(playerMode: playerMode)
+            return
+        }
+        
+        guard let player = player else {
+            return
+        }
+        
+        switch (player.currentPlayerMode, playerMode) {
+        case (.full, .intro):
+            break
+        default:
+            player.set(playerMode: playerMode)
+        }
     }
 }

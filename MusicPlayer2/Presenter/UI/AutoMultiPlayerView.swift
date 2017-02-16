@@ -29,11 +29,7 @@ extension AutoMultiPlayerView {
         var currentPlayerMode: PlayerMode = .intro
         
         func loadContent() {
-//            let playerPresenter = PlayerView.Presenter()
-//            let playerView = PlayerView()
-//            playerView.presenter = playerPresenter
-//            rx_event.onNext(.add(view: playerView))
-//            self.playerPresenter = playerPresenter
+
         }
         
         private func prepareToPlay(dataSource: APIDataSource<Movie>, index: Int) {
@@ -58,9 +54,6 @@ extension AutoMultiPlayerView {
             
             for movie in movies {
                 let movieID = movie.id
-//                guard let movieID = movie.id else {
-//                    continue
-//                }
                 
                 setupIfNeeded(movieID)
                 
