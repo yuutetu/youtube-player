@@ -153,4 +153,15 @@ class PlayerContainerViewController: UIViewController {
     @IBAction func handlePrevious() {
         MusicPlayerManager.default.previous()
     }
+    
+    @IBAction func handlePlayerModeChange() {
+        switch MusicPlayerManager.default.player?.currentPlayerMode {
+        case .some(.intro):
+            MusicPlayerManager.default.set(playerMode: .full, force: true)
+        case .some(.full):
+            MusicPlayerManager.default.set(playerMode: .intro, force: true)
+        default:
+            break
+        }
+    }
 }

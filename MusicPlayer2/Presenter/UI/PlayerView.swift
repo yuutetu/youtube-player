@@ -60,36 +60,40 @@ extension PlayerView {
         }
         
         func prepareToPlayWithYoutubeVideo(video: Movie) {
-            let videoId = video.id
-//            guard let videoId = video.id else {
-//                return
-//            }
-            
-            print("[MusicPlayer]: Prepare to play(videoId: \(videoId))")
-            // 再生準備処理
-            rx_event.on(.next(.loadStarted))
-            playerView?.load(withVideoId: videoId, playerVars: playerVars)
+            DispatchQueue.main.async {
+                let videoId = video.id
+                print("[MusicPlayer]: Prepare to play(videoId: \(videoId))")
+                // 再生準備処理
+                self.rx_event.on(.next(.loadStarted))
+                self.playerView?.load(withVideoId: videoId, playerVars: self.playerVars)
+            }
         }
         
         func play() {
-            print("[MusicPlayer]: Play")
-            // 再生処理
-            playing = true
-            playerView?.playVideo()
+            DispatchQueue.main.async {
+                print("[MusicPlayer]: Play")
+                // 再生処理
+                self.playing = true
+                self.playerView?.playVideo()
+            }
         }
         
         func pause() {
-            print("[MusicPlayer]: Pause")
-            // 再生処理
-            playing = false
-            playerView?.pauseVideo()
+            DispatchQueue.main.async {
+                print("[MusicPlayer]: Pause")
+                // 再生処理
+                self.playing = false
+                self.playerView?.pauseVideo()
+            }
         }
         
         func stop() {
-            print("[MusicPlayer]: Stop")
-            // 停止処理
-            playing = false
-            playerView?.stopVideo()
+            DispatchQueue.main.async {
+                print("[MusicPlayer]: Stop")
+                // 停止処理
+                self.playing = false
+                self.playerView?.stopVideo()
+            }
         }
         
         // MARK: - YTPlayerViewDelegate
@@ -120,16 +124,18 @@ class PlayerView: UIView, YTPlayerViewDelegate {
     }
     
     private func setupSubscribe() {
-        presenter?.rx_viewEvent.asDriver(onErrorJustReturn: .error).drive(onNext: { [weak self] event in
-            switch event {
-            case .set(let view):
-                self?.addSubview(view)
-                view.snp.makeConstraints({ make in
-                    make.edges.equalTo(0)
-                })
-            default:
-                break
-            }
-        }).addDisposableTo(disposeBag)
+        DispatchQueue.main.async {
+            self.presenter?.rx_viewEvent.asDriver(onErrorJustReturn: .error).drive(onNext: { [weak self] event in
+                switch event {
+                case .set(let view):
+                    self?.addSubview(view)
+                    view.snp.makeConstraints({ make in
+                        make.edges.equalTo(0)
+                    })
+                default:
+                    break
+                }
+            }).addDisposableTo(self.disposeBag)
+        }
     }
 }

@@ -19,12 +19,16 @@ protocol DataSource: Sequence, Collection {
     var numberOfItems: Int { get }
     func itemAtIndex(index: Int) -> ItemType?
     
-    func load()
+    func load(loaded: (() -> Void)?)
     func next()
     // func reset()
 }
 
 extension DataSource {
+    func load() {
+        load(loaded: nil)
+    }
+    
     func reload() {
         load()
     }
@@ -77,7 +81,7 @@ class APIDataSource<ItemType: APIModel>: DataSource {
         return models.value[index]
     }
     
-    func load() {
+    func load(loaded: (() -> Void)? = nil) {
         YoutubeAPIClient.default.request(request).subscribe({ event in
             switch event {
             case .next(let element):
@@ -86,6 +90,7 @@ class APIDataSource<ItemType: APIModel>: DataSource {
                 case .success(let movies) where movies is APIMultipleResponse<ItemType>:
                     self.models.value = (movies as! APIMultipleResponse<ItemType>).items
                     self.nextPageToken = (movies as! APIMultipleResponse<ItemType>).nextPageToken
+                    loaded?()
                 case .success:
                     // エラー文章セット
                     break

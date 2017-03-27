@@ -23,7 +23,7 @@ class MusicListCollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dataSource = APIDataSource<Movie>(request: YoutubeAPI.Movies.Search(query: "東方自然癒"))
+        dataSource = APIDataSource<Movie>(request: YoutubeAPI.Movies.Search(query: "pso2 bgm"))
         
         dataSource?.models.asDriver().drive(listView.rx.items(cellIdentifier: "ItemCell", cellType: MusicItemCollectionViewCell.self)) { [weak self]
             (index: Int, model: Movie, cell: MusicItemCollectionViewCell) -> Void in
@@ -37,9 +37,16 @@ class MusicListCollectionViewController: UIViewController {
             cell.setup(with: model)
         }.addDisposableTo(disposeBag)
         
+        
         listView.rx.delegate.setForwardToDelegate(self, retainDelegate: false)
         
-        dataSource?.load()
+        dataSource?.load(loaded: { [dataSource = self.dataSource] in
+            guard let dataSource = dataSource else {
+                return
+            }
+            
+            MusicPlayerManager.default.play(dataSource: dataSource, index: 0)
+        })
     }
 }
 

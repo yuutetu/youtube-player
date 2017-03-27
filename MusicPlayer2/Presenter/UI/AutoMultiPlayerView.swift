@@ -33,6 +33,11 @@ extension AutoMultiPlayerView {
         }
         
         private func prepareToPlay(dataSource: APIDataSource<Movie>, index: Int) {
+            guard index < dataSource.count else {
+                stop()
+                return
+            }
+            
             self.currentDataSource = dataSource
             self.currentIndex = index
             
@@ -85,12 +90,16 @@ extension AutoMultiPlayerView {
                 case .loadCompleted:
                     guard
                         let index = self.currentIndex,
-                        let currentMovieID = self.currentDataSource?[index].id,
-                        movieID == currentMovieID else {
+                        let dataSource = self.currentDataSource,
+                        movieID == dataSource[index].id else {
                         break
                     }
                     
-                    self.playerViewForMovieID[currentMovieID]?.presenter?.play()
+                    self.playerViewForMovieID[dataSource[index].id]?.presenter?.play()
+                    
+                    if dataSource.count - 1 <= index {
+                        dataSource.next()
+                    }
                 case .updatedPlayTime(let playTime):
                     if self.currentPlayerMode == .intro && playTime > 15 {
                         guard
